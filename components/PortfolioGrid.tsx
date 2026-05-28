@@ -83,6 +83,7 @@ export default function PortfolioGrid() {
             gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '1.5rem',
           }}
+          className="responsive-split"
         >
           {PORTFOLIO.map((item) => (
             <motion.div
@@ -96,6 +97,7 @@ export default function PortfolioGrid() {
                 display: 'flex',
                 flexDirection: 'column',
               }}
+              className="mobile-card-pad-lg"
             >
               {/* Tag */}
               <span

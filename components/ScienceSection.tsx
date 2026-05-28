@@ -88,7 +88,7 @@ export default function ScienceSection() {
             gap: '1px',
             background: 'var(--parchment)',
           }}
-          className="grid-cols-1 md:grid-cols-3"
+          className="responsive-three"
         >
           {SCIENCE_PILLARS.map((pillar) => (
             <motion.div
@@ -98,6 +98,7 @@ export default function ScienceSection() {
                 background: 'var(--bone)',
                 padding: '2.5rem 2rem',
               }}
+              className="mobile-card-pad"
             >
               {/* Formula */}
               <p

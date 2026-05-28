@@ -37,7 +37,7 @@ export default function CompanyStatement() {
           gap: '6rem',
           alignItems: 'start',
         }}
-        className="grid-cols-1 lg:grid-cols-[2fr_3fr]"
+        className="responsive-split mobile-gap"
       >
         {/* Left column */}
         <motion.div
@@ -53,7 +53,7 @@ export default function CompanyStatement() {
             tag="h2"
             style={{
               fontFamily: 'var(--font-cormorant)',
-              fontSize: '3rem',
+              fontSize: 'clamp(2.25rem, 8vw, 3rem)',
               fontWeight: 300,
               color: 'var(--ink)',
               lineHeight: 1.1,

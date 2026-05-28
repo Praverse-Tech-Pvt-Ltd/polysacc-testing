@@ -32,7 +32,7 @@ export default function HomePage() {
             gap: '6rem',
             alignItems: 'start',
           }}
-          className="grid-cols-1 lg:grid-cols-2"
+          className="responsive-split mobile-gap"
         >
           {/* Left: contact info */}
           <div>

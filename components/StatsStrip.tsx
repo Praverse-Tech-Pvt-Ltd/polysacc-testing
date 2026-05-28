@@ -28,7 +28,7 @@ export default function StatsStrip() {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
         }}
-        className="grid-cols-2 md:grid-cols-4"
+        className="responsive-stats"
       >
         {STATS.map((stat, i) => {
           const { to, suffix, separator } = parseStatForCountUp(stat.value)
@@ -38,6 +38,7 @@ export default function StatsStrip() {
               style={{
                 borderLeft: i > 0 ? '0.5px solid rgba(212,201,184,0.15)' : 'none',
               }}
+              className="responsive-stat-card"
             >
               <div
                 style={{

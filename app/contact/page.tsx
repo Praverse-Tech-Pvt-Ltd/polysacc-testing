@@ -17,6 +17,7 @@ export default function ContactPage() {
           background: 'var(--obsidian)',
           padding: '14rem 6rem 6rem',
         }}
+        className="page-hero"
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-tag" style={{ marginBottom: '1rem' }}>
@@ -68,7 +69,7 @@ export default function ContactPage() {
             gap: '6rem',
             alignItems: 'start',
           }}
-          className="grid-cols-1 lg:grid-cols-2"
+          className="responsive-split mobile-gap"
         >
           {/* Left: info */}
           <div>

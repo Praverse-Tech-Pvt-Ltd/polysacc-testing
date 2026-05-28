@@ -26,7 +26,8 @@ export default function Nav() {
   }, [menuOpen])
 
   return (
-    <nav
+    <>
+      <nav
       style={{
         position: 'fixed',
         top: '2rem',
@@ -42,8 +43,8 @@ export default function Nav() {
         transition: 'box-shadow 0.3s',
         boxShadow: scrolled ? '0 1px 0 rgba(200,137,58,0.3)' : 'none',
       }}
-    >
-      <div
+      >
+        <div
         style={{
           width: '100%',
           maxWidth: '1280px',
@@ -161,7 +162,8 @@ export default function Nav() {
             />
           ))}
         </button>
-      </div>
+        </div>
+      </nav>
 
       {/* Mobile overlay menu */}
       {menuOpen && (
@@ -170,12 +172,14 @@ export default function Nav() {
             position: 'fixed',
             inset: 0,
             background: 'var(--obsidian)',
-            zIndex: 40,
+            zIndex: 80,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '2.5rem',
+            gap: '1.5rem',
+            padding: '5rem 1.5rem 2rem',
+            overflowY: 'auto',
           }}
         >
           <button
@@ -200,9 +204,10 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
+              className="mobile-nav-link"
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: '2.5rem',
+                fontSize: 'clamp(2rem, 9vw, 2.5rem)',
                 fontWeight: 300,
                 fontStyle: 'italic',
                 color: 'var(--bone)',
@@ -220,7 +225,7 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', alignItems: 'center' }}>
             <a
               href="https://elmiron.in"
               target="_blank"
@@ -252,7 +257,7 @@ export default function Nav() {
           </div>
         </div>
       )}
-    </nav>
+    </>
   )
 }
 

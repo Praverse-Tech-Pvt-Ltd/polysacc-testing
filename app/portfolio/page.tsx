@@ -19,6 +19,7 @@ export default function PortfolioPage() {
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
         }}
+        className="page-hero"
       >
         <MolecularPattern variant="dark" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
@@ -64,6 +65,7 @@ export default function PortfolioPage() {
               borderLeft: '4px solid var(--amber)',
               padding: '4rem',
             }}
+            className="mobile-card-pad-lg"
           >
             {/* Header */}
             <div
@@ -133,15 +135,16 @@ export default function PortfolioPage() {
 
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '2fr 1fr',
-                gap: '4rem',
-                alignItems: 'start',
-              }}
-            >
+              display: 'grid',
+              gridTemplateColumns: '2fr 1fr',
+              gap: '4rem',
+              alignItems: 'start',
+            }}
+            className="responsive-split mobile-gap"
+          >
               <div>
                 {[
-                  `Elmiron® (Pentosan Polysulfate Sodium) is India's only oral PPS formulation — a semi-synthetic, heparin-like polysaccharide that acts by replenishing the glycosaminoglycan (GAG) layer of the bladder urothelium. It is the only FDA-approved oral therapy for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS), a debilitating chronic condition characterised by pelvic pain, urinary urgency, frequency, and nocturia.`,
+                  `Elmiron® (Pentosan Polysulfate Sodium) is India's only oral PPS formulation — a semi-synthetic, heparin-like polysaccharide that acts by replenishing the glycosaminoglycan (GAG) layer of the bladder urothelium. It is among the best FDA-approved oral therapies for Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS), a debilitating chronic condition characterised by pelvic pain, urinary urgency, frequency, and nocturia.`,
                   `IC/BPS affects an estimated 3–8% of women globally and is significantly underdiagnosed in India. The Elmiron® formulation by Polysaccharide Chemistry represents the first and only locally manufactured oral PPS product, removing barriers of cost, availability, and supply chain that had previously made this therapy inaccessible to Indian patients.`,
                   `Available in two evidence-based formulations — 100mg oral capsules (standard-of-care, first-line PPS therapy) and 50mg/mL intravesical solution (for patients requiring direct bladder installation) — Elmiron® delivers the same active molecule through routes optimised for individual clinical presentations.`,
                 ].map((para, i) => (
@@ -225,6 +228,7 @@ export default function PortfolioPage() {
               borderLeft: '4px solid var(--amber)',
               padding: '4rem',
             }}
+            className="mobile-card-pad-lg"
           >
             <div style={{ marginBottom: '2.5rem' }}>
               <span
@@ -272,12 +276,13 @@ export default function PortfolioPage() {
 
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '2fr 1fr',
-                gap: '4rem',
-                alignItems: 'start',
-              }}
-            >
+              display: 'grid',
+              gridTemplateColumns: '2fr 1fr',
+              gap: '4rem',
+              alignItems: 'start',
+            }}
+            className="responsive-split mobile-gap"
+          >
               <div>
                 {[
                   `The Missed Bladder Disease initiative is a structured physician education programme addressing one of India's most significant diagnostic gaps: the systemic under-recognition of Interstitial Cystitis and Bladder Pain Syndrome in women. Surveys consistently show IC/BPS patients waiting 5–7 years for diagnosis, cycling through multiple misdiagnoses including recurrent UTI, endometriosis, and irritable bowel syndrome.`,

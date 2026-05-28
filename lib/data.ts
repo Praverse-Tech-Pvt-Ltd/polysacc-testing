@@ -20,7 +20,7 @@ export const PORTFOLIO = [
     name: 'Elmiron®',
     subtitle: 'Pentosan Polysulfate Sodium',
     description:
-      "India's only oral PPS therapy. The only FDA-approved treatment for Interstitial Cystitis / Bladder Pain Syndrome. Available in 100mg oral capsules and 50mg/mL intravesical solution.",
+      "India's only oral PPS therapy. Among the best FDA-approved treatments for Interstitial Cystitis / Bladder Pain Syndrome. Available in 100mg oral capsules and 50mg/mL intravesical solution.",
     url: 'https://elmiron.in',
     cta: 'elmiron.in ↗',
     tag: 'Pharmaceutical',

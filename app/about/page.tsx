@@ -37,6 +37,7 @@ export default function AboutPage() {
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
         }}
+        className="page-hero"
       >
         <MolecularPattern variant="dark" />
         <div
@@ -96,7 +97,7 @@ export default function AboutPage() {
             gap: '6rem',
             alignItems: 'start',
           }}
-          className="grid-cols-1 lg:grid-cols-[1fr_2fr]"
+          className="responsive-split mobile-gap"
         >
           {/* Left */}
           <div>
@@ -106,7 +107,7 @@ export default function AboutPage() {
             <p
               style={{
                 fontFamily: 'var(--font-cormorant)',
-                fontSize: '5rem',
+                fontSize: 'clamp(3rem, 15vw, 5rem)',
                 fontWeight: 300,
                 color: 'var(--amber)',
                 lineHeight: 1,
@@ -134,7 +135,7 @@ export default function AboutPage() {
           <div>
             {[
               `Polysaccharide Chemistry Pvt Ltd was founded with a clear mandate: to bring polysaccharide-based therapeutics — the most structurally sophisticated class of pharmaceutical compounds — to Indian patients who had long been denied access to them. Our founding team identified a critical gap: India's pharmaceutical industry, despite its generic manufacturing strength, had no local presence in the complex polysaccharide therapeutic space.`,
-              `Our first act was the development and commercialisation of Elmiron® (Pentosan Polysulfate Sodium), a semi-synthetic polysaccharide derived from beechwood hemicellulose. It is the only FDA-approved oral therapy for Interstitial Cystitis and Bladder Pain Syndrome — a condition that, in India, had been virtually undiagnosed and entirely untreated. Elmiron® is now available in two formulations: 100mg oral capsules and 50mg/mL intravesical solution, manufactured to international standards.`,
+              `Our first act was the development and commercialisation of Elmiron® (Pentosan Polysulfate Sodium), a semi-synthetic polysaccharide derived from beechwood hemicellulose. It is among the best FDA-approved oral therapies for Interstitial Cystitis and Bladder Pain Syndrome — a condition that, in India, had been virtually undiagnosed and entirely untreated. Elmiron® is now available in two formulations: 100mg oral capsules and 50mg/mL intravesical solution, manufactured to international standards.`,
               `We are headquartered in Mumbai's Kalbadevi district — a location that speaks to our roots in India's pharmaceutical and chemical trading heritage, combined with our forward-looking clinical mission. Our work sits at the crossroads of organic chemistry, polymer science, clinical pharmacology, and medical education.`,
             ].map((para, i) => (
               <p
@@ -187,7 +188,7 @@ export default function AboutPage() {
               gap: '1px',
               background: 'var(--parchment)',
             }}
-            className="grid-cols-1 md:grid-cols-3"
+            className="responsive-three"
           >
             {philosophyCards.map((card, i) => (
               <div
@@ -196,6 +197,7 @@ export default function AboutPage() {
                   background: 'var(--bone)',
                   padding: '2.5rem 2rem',
                 }}
+                className="mobile-card-pad"
               >
                 <div
                   style={{
@@ -246,6 +248,7 @@ export default function AboutPage() {
           padding: '6rem',
           textAlign: 'center',
         }}
+        className="section-pad"
       >
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           {/* Map pin icon */}

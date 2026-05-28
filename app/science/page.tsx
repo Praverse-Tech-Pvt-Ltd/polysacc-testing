@@ -19,6 +19,7 @@ export default function SciencePage() {
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
         }}
+        className="page-hero"
       >
         <MolecularPattern variant="dark" />
         <div
@@ -74,7 +75,7 @@ export default function SciencePage() {
               gap: '6rem',
               alignItems: 'start',
             }}
-            className="grid-cols-1 lg:grid-cols-2"
+            className="responsive-split mobile-gap"
           >
             <div>
               <p className="section-tag" style={{ marginBottom: '1rem' }}>
@@ -203,7 +204,7 @@ export default function SciencePage() {
               gap: '5rem',
               alignItems: 'start',
             }}
-            className="grid-cols-1 lg:grid-cols-2"
+            className="responsive-split mobile-gap"
           >
             <div>
               {[
@@ -279,7 +280,7 @@ export default function SciencePage() {
               gap: '1px',
               background: 'rgba(212,201,184,0.15)',
             }}
-            className="grid-cols-1 md:grid-cols-3"
+            className="responsive-three"
           >
             {[
               {
@@ -305,6 +306,7 @@ export default function SciencePage() {
                   padding: '2.5rem 2rem',
                   borderLeft: '0.5px solid rgba(212,201,184,0.15)',
                 }}
+                className="mobile-card-pad"
               >
                 <p
                   style={{
@@ -398,7 +400,7 @@ export default function SciencePage() {
                   gap: '3rem',
                   alignItems: 'start',
                 }}
-                className="grid-cols-1 md:grid-cols-[240px_1fr]"
+                className="responsive-clinical-row mobile-card-pad"
               >
                 <div>
                   <p

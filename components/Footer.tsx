@@ -36,6 +36,7 @@ export default function Footer() {
           gap: '3rem',
           marginBottom: '3rem',
         }}
+        className="responsive-footer-grid"
       >
         {/* Column 1 — Brand */}
         <div>

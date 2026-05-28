@@ -96,7 +96,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
     <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       {/* Row: name + company */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}
-           className="grid-cols-1 sm:grid-cols-2">
+           className="responsive-form-row">
         <div>
           <input
             {...register('name')}
@@ -120,7 +120,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
 
       {/* Row: email + phone */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}
-           className="grid-cols-1 sm:grid-cols-2">
+           className="responsive-form-row">
         <div>
           <input
             {...register('email')}
