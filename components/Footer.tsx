@@ -133,6 +133,18 @@ export default function Footer() {
             {COMPANY.address.line3}<br />
             {COMPANY.address.city} – {COMPANY.address.pin}
           </address>
+          <div style={{ marginTop: '1.25rem', borderTop: '0.5px solid rgba(138,171,138,0.12)', paddingTop: '1.25rem' }}>
+            <p style={{ ...colHeading, marginBottom: '0.6rem' }}>CTO &amp; Promoter</p>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.82rem', fontWeight: 400, color: 'var(--cream)', marginBottom: '0.2rem' }}>
+              Pratham Shrivastav
+            </p>
+            <a
+              href="mailto:pratham@polysacc.com"
+              style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.78rem', fontWeight: 300, color: 'var(--sage)', textDecoration: 'none', transition: 'color 0.2s', display: 'block' }}
+            >
+              pratham@polysacc.com
+            </a>
+          </div>
         </div>
       </div>
 

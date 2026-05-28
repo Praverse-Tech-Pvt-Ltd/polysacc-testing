@@ -14,6 +14,16 @@ export const COMPANY = {
   phone: '+91 80972 53466',
 } as const
 
+export const LEADERSHIP = [
+  {
+    name: 'Pratham Shrivastav',
+    title: 'Chief Technology Officer',
+    role: 'CTO & Promoter',
+    email: 'pratham@polysacc.com',
+    bio: 'Pratham Shrivastav is the CTO and Promoter of Polysaccharide Chemistry Pvt Ltd, overseeing the technology and digital infrastructure across the company\'s pharmaceutical and medical education platforms, including Elmiron® and the Missed Bladder Disease initiative.',
+  },
+] as const
+
 export const PORTFOLIO = [
   {
     type: 'Product',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import MolecularPattern from '@/components/MolecularPattern'
-import { COMPANY } from '@/lib/data'
+import { COMPANY, LEADERSHIP } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -236,6 +236,122 @@ export default function AboutPage() {
                 >
                   {card.body}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section
+        style={{ background: 'var(--cream)', padding: '8rem 6rem' }}
+        className="section-pad"
+      >
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p className="section-tag" style={{ marginBottom: '1rem' }}>
+            Leadership
+          </p>
+          <h2
+            style={{
+              fontFamily: 'var(--font-cormorant)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 300,
+              color: 'var(--charcoal)',
+              lineHeight: 1.15,
+              marginBottom: '3.5rem',
+            }}
+          >
+            The team behind the science
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '1px',
+              background: 'rgba(138,171,138,0.2)',
+            }}
+            className="responsive-three"
+          >
+            {LEADERSHIP.map((person) => (
+              <div
+                key={person.name}
+                style={{ background: 'var(--sage-pale)', padding: '2.5rem 2rem' }}
+                className="mobile-card-pad"
+              >
+                <div
+                  style={{
+                    width: 32,
+                    height: '0.5px',
+                    background: 'var(--sage)',
+                    marginBottom: '1.5rem',
+                  }}
+                />
+                <p
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.68rem',
+                    fontWeight: 500,
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    color: 'var(--sage-deep)',
+                    marginBottom: '0.5rem',
+                  }}
+                >
+                  {person.role}
+                </p>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-cormorant)',
+                    fontSize: '1.75rem',
+                    fontWeight: 300,
+                    color: 'var(--charcoal)',
+                    lineHeight: 1.15,
+                    marginBottom: '0.35rem',
+                  }}
+                >
+                  {person.name}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 300,
+                    color: 'var(--muted)',
+                    marginBottom: '1.25rem',
+                    letterSpacing: '0.03em',
+                  }}
+                >
+                  {person.title}
+                </p>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.85rem',
+                    fontWeight: 300,
+                    color: 'var(--charcoal)',
+                    lineHeight: 1.8,
+                    marginBottom: '1.5rem',
+                  }}
+                >
+                  {person.bio}
+                </p>
+                <a
+                  href={`mailto:${person.email}`}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.8rem',
+                    fontWeight: 400,
+                    color: 'var(--sage-deep)',
+                    textDecoration: 'none',
+                    letterSpacing: '0.03em',
+                    borderBottom: '0.5px solid rgba(138,171,138,0.5)',
+                    paddingBottom: '1px',
+                    transition: 'color 0.2s, border-color 0.2s',
+                  }}
+                >
+                  {person.email}
+                </a>
               </div>
             ))}
           </div>
