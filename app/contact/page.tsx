@@ -129,51 +129,6 @@ export default function ContactPage() {
               </address>
             </div>
 
-            {/* Email & Phone */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
-              <div>
-                <p
-                  className="section-tag"
-                  style={{ color: 'var(--amber)', marginBottom: '0.35rem' }}
-                >
-                  Email
-                </p>
-                <a
-                  href={`mailto:${COMPANY.email}`}
-                  style={{
-                    fontFamily: 'var(--font-dm-sans)',
-                    fontSize: '0.9rem',
-                    fontWeight: 300,
-                    color: 'var(--amber)',
-                    textDecoration: 'none',
-                    transition: 'color 0.2s',
-                  }}
-                >
-                  {COMPANY.email}
-                </a>
-              </div>
-              <div>
-                <p
-                  className="section-tag"
-                  style={{ color: 'var(--amber)', marginBottom: '0.35rem' }}
-                >
-                  Phone
-                </p>
-                <a
-                  href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}
-                  style={{
-                    fontFamily: 'var(--font-dm-sans)',
-                    fontSize: '0.9rem',
-                    fontWeight: 300,
-                    color: 'var(--pewter)',
-                    textDecoration: 'none',
-                  }}
-                >
-                  {COMPANY.phone}
-                </a>
-              </div>
-            </div>
-
             {/* Embedded map placeholder */}
             <div
               style={{

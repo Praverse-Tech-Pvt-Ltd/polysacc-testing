@@ -117,18 +117,6 @@ export default function Footer() {
         {/* Column 4 — Contact */}
         <div>
           <p style={colHeading}>Contact</p>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            className="footer-link-amber"
-          >
-            {COMPANY.email}
-          </a>
-          <a
-            href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}
-            className="footer-link"
-          >
-            {COMPANY.phone}
-          </a>
           <address
             style={{
               fontFamily: 'var(--font-dm-sans)',
