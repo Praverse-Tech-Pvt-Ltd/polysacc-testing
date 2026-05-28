@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
+import MolecularPattern from '@/components/MolecularPattern'
 import { COMPANY } from '@/lib/data'
 
 export const metadata: Metadata = {
@@ -14,13 +15,16 @@ export default function ContactPage() {
       {/* Hero */}
       <section
         style={{
-          background: 'var(--cream)',
+          position: 'relative',
+          background: 'var(--hero-grey)',
           padding: '14rem 6rem 6rem',
-          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
+          overflow: 'hidden',
+          borderBottom: '0.5px solid rgba(91,99,94,0.18)',
         }}
         className="page-hero"
       >
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <MolecularPattern variant="heroGrey" />
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-tag" style={{ marginBottom: '1rem' }}>
             Contact
           </p>

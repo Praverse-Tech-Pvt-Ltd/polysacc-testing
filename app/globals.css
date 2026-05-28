@@ -11,6 +11,7 @@
   --charcoal:    #2c2c2a;
   --muted:       #6b6b68;
   --border:      rgba(138, 171, 138, 0.25);
+  --hero-grey:   #f1f1ee;
 }
 
 @layer base {

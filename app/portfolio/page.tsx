@@ -15,14 +15,14 @@ export default function PortfolioPage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--cream)',
+          background: 'var(--hero-grey)',
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
-          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
+          borderBottom: '0.5px solid rgba(91,99,94,0.18)',
         }}
         className="page-hero"
       >
-        <MolecularPattern variant="light" />
+        <MolecularPattern variant="heroGrey" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-tag" style={{ marginBottom: '1rem' }}>
             Portfolio

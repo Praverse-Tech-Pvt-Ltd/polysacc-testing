@@ -3,7 +3,7 @@
 import { useId } from 'react'
 
 interface MolecularPatternProps {
-  variant?: 'dark' | 'light'
+  variant?: 'dark' | 'light' | 'heroGrey'
 }
 
 export default function MolecularPattern({ variant = 'light' }: MolecularPatternProps) {
@@ -13,11 +13,15 @@ export default function MolecularPattern({ variant = 'light' }: MolecularPattern
   const lineColor =
     variant === 'dark'
       ? 'rgba(138,171,138,0.12)'
+      : variant === 'heroGrey'
+      ? 'rgba(91,99,94,0.16)'
       : 'rgba(74,122,74,0.08)'
 
   const nodeColor =
     variant === 'dark'
       ? 'rgba(138,171,138,0.18)'
+      : variant === 'heroGrey'
+      ? 'rgba(91,99,94,0.24)'
       : 'rgba(74,122,74,0.12)'
 
   return (

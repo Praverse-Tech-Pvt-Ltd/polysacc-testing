@@ -33,14 +33,14 @@ export default function AboutPage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--cream)',
+          background: 'var(--hero-grey)',
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
-          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
+          borderBottom: '0.5px solid rgba(91,99,94,0.18)',
         }}
         className="page-hero"
       >
-        <MolecularPattern variant="light" />
+        <MolecularPattern variant="heroGrey" />
         <div
           style={{
             position: 'relative',
