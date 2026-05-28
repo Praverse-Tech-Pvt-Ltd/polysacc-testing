@@ -23,7 +23,7 @@ export default function CompanyStatement() {
     <section
       ref={ref}
       style={{
-        background: 'var(--bone)',
+        background: 'var(--cream)',
         padding: '8rem 6rem',
       }}
       className="section-pad"
@@ -55,7 +55,7 @@ export default function CompanyStatement() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2.25rem, 8vw, 3rem)',
               fontWeight: 300,
-              color: 'var(--ink)',
+              color: 'var(--charcoal)',
               lineHeight: 1.1,
               marginBottom: '1.25rem',
             }}
@@ -67,7 +67,7 @@ export default function CompanyStatement() {
             style={{
               width: 40,
               height: '0.5px',
-              background: 'var(--amber)',
+              background: 'var(--sage)',
             }}
           />
         </motion.div>
@@ -89,8 +89,8 @@ export default function CompanyStatement() {
               style={{
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '1rem',
-                fontWeight: i === 0 ? 300 : 300,
-                color: 'var(--ink)',
+                fontWeight: 300,
+                color: 'var(--charcoal)',
                 lineHeight: 1.9,
                 marginBottom: '1.75rem',
               }}
@@ -102,7 +102,7 @@ export default function CompanyStatement() {
           {/* Divider */}
           <div
             style={{
-              borderTop: '0.5px solid rgba(42,42,38,0.15)',
+              borderTop: '0.5px solid rgba(44,44,42,0.12)',
               margin: '2rem 0',
             }}
           />
@@ -111,7 +111,7 @@ export default function CompanyStatement() {
           <motion.div variants={fadeUp}>
             <p
               className="section-tag"
-              style={{ color: 'var(--amber)', marginBottom: '0.75rem' }}
+              style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}
             >
               Registered Office
             </p>
@@ -120,7 +120,7 @@ export default function CompanyStatement() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.88rem',
                 fontWeight: 300,
-                color: 'var(--pewter)',
+                color: 'var(--muted)',
                 lineHeight: 2,
                 fontStyle: 'normal',
               }}

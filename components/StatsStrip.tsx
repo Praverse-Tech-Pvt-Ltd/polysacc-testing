@@ -3,12 +3,10 @@
 import { STATS } from '@/lib/data'
 import CountUp from './reactbits/CountUp'
 
-/** Map stat value string → CountUp props + any suffix to render beside it */
 function parseStatForCountUp(value: string) {
   if (value === '5/7')  return { to: 5, suffix: '/7', separator: '' }
   if (value.endsWith('+')) return { to: parseInt(value), suffix: '+', separator: '' }
   if (value.endsWith('%')) return { to: parseInt(value), suffix: '%', separator: '' }
-  // "2,809"
   const num = parseInt(value.replace(/,/g, ''))
   return { to: num, suffix: '', separator: ',' }
 }
@@ -17,8 +15,10 @@ export default function StatsStrip() {
   return (
     <section
       style={{
-        background: 'var(--slate)',
+        background: 'var(--sage-pale)',
         position: 'relative',
+        borderTop: '0.5px solid rgba(138,171,138,0.25)',
+        borderBottom: '0.5px solid rgba(138,171,138,0.25)',
       }}
     >
       <div
@@ -36,7 +36,7 @@ export default function StatsStrip() {
             <div
               key={stat.label}
               style={{
-                borderLeft: i > 0 ? '0.5px solid rgba(212,201,184,0.15)' : 'none',
+                borderLeft: i > 0 ? '0.5px solid rgba(138,171,138,0.25)' : 'none',
               }}
               className="responsive-stat-card"
             >
@@ -52,7 +52,7 @@ export default function StatsStrip() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '4rem',
                     fontWeight: 300,
-                    color: 'var(--amber)',
+                    color: 'var(--sage-deep)',
                     lineHeight: 1,
                     marginBottom: '1rem',
                   }}
@@ -74,7 +74,7 @@ export default function StatsStrip() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.78rem',
                     fontWeight: 300,
-                    color: 'var(--pewter)',
+                    color: 'var(--muted)',
                     lineHeight: 1.6,
                     maxWidth: 180,
                     margin: '0 auto',

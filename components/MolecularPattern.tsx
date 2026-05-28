@@ -6,19 +6,19 @@ interface MolecularPatternProps {
   variant?: 'dark' | 'light'
 }
 
-export default function MolecularPattern({ variant = 'dark' }: MolecularPatternProps) {
+export default function MolecularPattern({ variant = 'light' }: MolecularPatternProps) {
   const uid = useId().replace(/:/g, '')
   const patternId = `mol-${variant}-${uid}`
 
   const lineColor =
     variant === 'dark'
-      ? 'rgba(200,137,58,0.08)'
-      : 'rgba(42,42,38,0.06)'
+      ? 'rgba(138,171,138,0.12)'
+      : 'rgba(74,122,74,0.08)'
 
   const nodeColor =
     variant === 'dark'
-      ? 'rgba(200,137,58,0.13)'
-      : 'rgba(42,42,38,0.10)'
+      ? 'rgba(138,171,138,0.18)'
+      : 'rgba(74,122,74,0.12)'
 
   return (
     <div
@@ -33,12 +33,6 @@ export default function MolecularPattern({ variant = 'dark' }: MolecularPatternP
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/*
-            Flat-top hex tessellation: side S=30
-            Width = 2S = 60, Height = S·√3 ≈ 51.96
-            Tile: 90 × 52
-            Main hex centred at (45, 26)
-          */}
           <pattern
             id={patternId}
             x="0"
@@ -54,35 +48,35 @@ export default function MolecularPattern({ variant = 'dark' }: MolecularPatternP
               stroke={lineColor}
               strokeWidth="0.5"
             />
-            {/* Corner hex top-left (0, 0) — partially visible */}
+            {/* Corner hex top-left */}
             <path
               d="M 30 0 L 15 26 L -15 26 L -30 0 L -15 -26 L 15 -26 Z"
               fill="none"
               stroke={lineColor}
               strokeWidth="0.5"
             />
-            {/* Corner hex top-right (90, 0) — partially visible */}
+            {/* Corner hex top-right */}
             <path
               d="M 120 0 L 105 26 L 75 26 L 60 0 L 75 -26 L 105 -26 Z"
               fill="none"
               stroke={lineColor}
               strokeWidth="0.5"
             />
-            {/* Corner hex bottom-left (0, 52) — partially visible */}
+            {/* Corner hex bottom-left */}
             <path
               d="M 30 52 L 15 78 L -15 78 L -30 52 L -15 26 L 15 26 Z"
               fill="none"
               stroke={lineColor}
               strokeWidth="0.5"
             />
-            {/* Corner hex bottom-right (90, 52) — partially visible */}
+            {/* Corner hex bottom-right */}
             <path
               d="M 120 52 L 105 78 L 75 78 L 60 52 L 75 26 L 105 26 Z"
               fill="none"
               stroke={lineColor}
               strokeWidth="0.5"
             />
-            {/* Atom nodes at main hex vertices */}
+            {/* Atom nodes */}
             <circle cx="75" cy="26" r="1.5" fill={nodeColor} />
             <circle cx="60" cy="52" r="1.5" fill={nodeColor} />
             <circle cx="30" cy="52" r="1.5" fill={nodeColor} />

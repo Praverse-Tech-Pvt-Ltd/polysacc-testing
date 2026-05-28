@@ -5,14 +5,13 @@ interface AddressBlockProps {
 }
 
 export default function AddressBlock({ variant = 'light' }: AddressBlockProps) {
-  const labelColor = 'color: var(--amber)'
-  const textColor = variant === 'dark' ? 'rgba(212,201,184,0.7)' : 'var(--pewter)'
+  const textColor = variant === 'dark' ? 'rgba(248,246,241,0.7)' : 'var(--muted)'
 
   return (
     <div>
       <p
         className="section-tag mb-3"
-        style={{ color: 'var(--amber)' }}
+        style={{ color: 'var(--sage)' }}
       >
         Registered Office
       </p>

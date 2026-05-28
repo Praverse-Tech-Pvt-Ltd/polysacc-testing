@@ -19,9 +19,9 @@ type FormData = z.infer<typeof schema>
 
 const fieldStyle: React.CSSProperties = {
   width: '100%',
-  background: 'rgba(255,255,255,0.04)',
-  border: '0.5px solid rgba(212,201,184,0.2)',
-  color: 'var(--bone)',
+  background: 'rgba(255,255,255,0.05)',
+  border: '0.5px solid rgba(138,171,138,0.25)',
+  color: 'var(--cream)',
   fontFamily: 'var(--font-dm-sans)',
   fontSize: '0.9rem',
   fontWeight: 300,
@@ -51,7 +51,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
       })
       if (res.ok) setSubmitted(true)
     } catch {
-      // silently handle — user sees nothing unexpected
+      // silently handle
     } finally {
       setSubmitting(false)
     }
@@ -63,7 +63,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
         style={{
           textAlign: 'center',
           padding: '4rem 2rem',
-          border: '0.5px solid rgba(200,137,58,0.3)',
+          border: '0.5px solid rgba(138,171,138,0.3)',
         }}
       >
         <p
@@ -72,7 +72,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             fontSize: '2rem',
             fontWeight: 300,
             fontStyle: 'italic',
-            color: 'var(--bone)',
+            color: 'var(--cream)',
             marginBottom: '0.75rem',
           }}
         >
@@ -83,7 +83,7 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             fontFamily: 'var(--font-dm-sans)',
             fontSize: '0.9rem',
             fontWeight: 300,
-            color: 'var(--pewter)',
+            color: 'var(--sage-light)',
           }}
         >
           We&apos;ll be in touch shortly.
@@ -102,8 +102,8 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             {...register('name')}
             placeholder="Full Name *"
             style={fieldStyle}
-            onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-            onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+            onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+            onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
           />
           {errors.name && <ErrorMsg msg={errors.name.message!} />}
         </div>
@@ -112,8 +112,8 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             {...register('company')}
             placeholder="Company / Institution"
             style={fieldStyle}
-            onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-            onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+            onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+            onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
           />
         </div>
       </div>
@@ -127,8 +127,8 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             type="email"
             placeholder="Email Address *"
             style={fieldStyle}
-            onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-            onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+            onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+            onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
           />
           {errors.email && <ErrorMsg msg={errors.email.message!} />}
         </div>
@@ -138,27 +138,27 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
             type="tel"
             placeholder="Phone (optional)"
             style={fieldStyle}
-            onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-            onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+            onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+            onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
           />
         </div>
       </div>
 
-      {/* Enquiry type (optional, shown on contact page) */}
+      {/* Enquiry type */}
       {showEnquiryType && (
         <div>
           <select
             {...register('type')}
-            style={{ ...fieldStyle, color: 'var(--pewter)' }}
+            style={{ ...fieldStyle, color: 'var(--sage-light)' }}
             defaultValue=""
-            onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-            onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+            onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+            onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
           >
-            <option value="" disabled style={{ background: 'var(--slate)' }}>
+            <option value="" disabled style={{ background: 'var(--charcoal)' }}>
               Enquiry Type
             </option>
             {ENQUIRY_TYPES.map((t) => (
-              <option key={t} value={t} style={{ background: 'var(--slate)' }}>
+              <option key={t} value={t} style={{ background: 'var(--charcoal)' }}>
                 {t}
               </option>
             ))}
@@ -173,8 +173,8 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
           placeholder="Your message *"
           rows={5}
           style={{ ...fieldStyle, resize: 'vertical' }}
-          onFocus={(e) => (e.target.style.borderColor = 'var(--amber)')}
-          onBlur={(e) => (e.target.style.borderColor = 'rgba(212,201,184,0.2)')}
+          onFocus={(e) => (e.target.style.borderColor = 'var(--sage)')}
+          onBlur={(e) => (e.target.style.borderColor = 'rgba(138,171,138,0.25)')}
         />
         {errors.message && <ErrorMsg msg={errors.message.message!} />}
       </div>
@@ -186,8 +186,8 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
         style={{
           width: '100%',
           padding: '1rem',
-          background: submitting ? 'rgba(200,137,58,0.6)' : 'var(--amber)',
-          color: 'var(--obsidian)',
+          background: submitting ? 'rgba(138,171,138,0.6)' : 'var(--sage)',
+          color: 'var(--cream)',
           fontFamily: 'var(--font-dm-sans)',
           fontSize: '0.9rem',
           fontWeight: 500,
@@ -200,11 +200,11 @@ export default function ContactForm({ showEnquiryType = false }: { showEnquiryTy
         }}
         onMouseEnter={(e) => {
           if (!submitting)
-            (e.currentTarget as HTMLElement).style.background = 'var(--amber-light)'
+            (e.currentTarget as HTMLElement).style.background = 'var(--sage-deep)'
         }}
         onMouseLeave={(e) => {
           if (!submitting)
-            (e.currentTarget as HTMLElement).style.background = 'var(--amber)'
+            (e.currentTarget as HTMLElement).style.background = 'var(--sage)'
         }}
       >
         {submitting ? 'Sending…' : 'Send Enquiry'}

@@ -25,13 +25,14 @@ export default function PortfolioGrid() {
       ref={ref}
       style={{
         position: 'relative',
-        background: 'var(--obsidian)',
+        background: 'var(--cream)',
         padding: '8rem 6rem',
         overflow: 'hidden',
+        borderTop: '0.5px solid rgba(138,171,138,0.25)',
       }}
       className="section-pad"
     >
-      <MolecularPattern variant="dark" />
+      <MolecularPattern variant="light" />
 
       <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
         {/* Header */}
@@ -51,7 +52,7 @@ export default function PortfolioGrid() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2rem, 4vw, 3.5rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.1,
               marginBottom: '1rem',
               justifyContent: 'center',
@@ -65,7 +66,7 @@ export default function PortfolioGrid() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               letterSpacing: '0.04em',
             }}
           >
@@ -90,9 +91,9 @@ export default function PortfolioGrid() {
               key={item.name}
               variants={fadeUp}
               style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '0.5px solid rgba(200,137,58,0.2)',
-                borderLeft: '3px solid var(--amber)',
+                background: 'var(--sage-pale)',
+                border: '0.5px solid rgba(138,171,138,0.3)',
+                borderLeft: '3px solid var(--sage)',
                 padding: '3rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -103,8 +104,8 @@ export default function PortfolioGrid() {
               <span
                 style={{
                   display: 'inline-block',
-                  background: 'var(--amber-pale)',
-                  color: 'var(--amber)',
+                  background: 'rgba(138,171,138,0.2)',
+                  color: 'var(--sage-deep)',
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.7rem',
                   fontWeight: 500,
@@ -124,7 +125,7 @@ export default function PortfolioGrid() {
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: '2.5rem',
                   fontWeight: 300,
-                  color: 'var(--bone)',
+                  color: 'var(--charcoal)',
                   lineHeight: 1.1,
                   marginBottom: '0.5rem',
                 }}
@@ -138,7 +139,7 @@ export default function PortfolioGrid() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.85rem',
                   fontWeight: 300,
-                  color: 'var(--pewter)',
+                  color: 'var(--muted)',
                   marginBottom: '1.25rem',
                   letterSpacing: '0.03em',
                 }}
@@ -147,7 +148,7 @@ export default function PortfolioGrid() {
               </p>
 
               {/* Divider */}
-              <div style={{ borderTop: '0.5px solid rgba(212,201,184,0.15)', marginBottom: '1.25rem' }} />
+              <div style={{ borderTop: '0.5px solid rgba(138,171,138,0.3)', marginBottom: '1.25rem' }} />
 
               {/* Description */}
               <p
@@ -155,7 +156,7 @@ export default function PortfolioGrid() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.9rem',
                   fontWeight: 300,
-                  color: 'rgba(138,138,130,0.85)',
+                  color: 'var(--charcoal)',
                   lineHeight: 1.85,
                   marginBottom: '1.5rem',
                   flex: 1,
@@ -169,7 +170,7 @@ export default function PortfolioGrid() {
                 style={{
                   fontFamily: 'var(--font-jetbrains)',
                   fontSize: '0.78rem',
-                  color: 'rgba(200,137,58,0.7)',
+                  color: 'var(--sage-deep)',
                   marginBottom: '2rem',
                   letterSpacing: '0.02em',
                 }}
@@ -177,7 +178,7 @@ export default function PortfolioGrid() {
                 {item.detail}
               </p>
 
-              {/* Link button — CSS class handles hover */}
+              {/* Link button */}
               <a
                 href={item.url}
                 target="_blank"

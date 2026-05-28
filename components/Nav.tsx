@@ -37,11 +37,11 @@ export default function Nav() {
         height: 64,
         display: 'flex',
         alignItems: 'center',
-        background: 'rgba(15,15,15,0.97)',
+        background: 'rgba(248,246,241,0.97)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '0.5px solid rgba(200,137,58,0.2)',
+        borderBottom: '0.5px solid rgba(138,171,138,0.25)',
         transition: 'box-shadow 0.3s',
-        boxShadow: scrolled ? '0 1px 0 rgba(200,137,58,0.3)' : 'none',
+        boxShadow: scrolled ? '0 1px 0 rgba(138,171,138,0.3)' : 'none',
       }}
       >
         <div
@@ -64,7 +64,7 @@ export default function Nav() {
                 fontSize: '0.75rem',
                 fontWeight: 500,
                 letterSpacing: '0.2em',
-                color: 'var(--amber)',
+                color: 'var(--sage-deep)',
                 textTransform: 'uppercase',
               }}
             >
@@ -76,7 +76,7 @@ export default function Nav() {
                 fontSize: '0.6rem',
                 fontWeight: 300,
                 letterSpacing: '0.15em',
-                color: 'var(--pewter)',
+                color: 'var(--muted)',
                 textTransform: 'uppercase',
               }}
             >
@@ -98,13 +98,13 @@ export default function Nav() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.85rem',
                 fontWeight: 400,
-                color: 'var(--pewter)',
+                color: 'var(--muted)',
                 textDecoration: 'none',
                 transition: 'color 0.3s',
                 letterSpacing: '0.03em',
               }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--bone)')}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'var(--pewter)')}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--charcoal)')}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'var(--muted)')}
             >
               {link.label}
             </Link>
@@ -147,7 +147,7 @@ export default function Nav() {
                 display: 'block',
                 width: 20,
                 height: '1px',
-                background: 'var(--amber)',
+                background: 'var(--sage)',
                 transition: 'all 0.3s',
                 transform:
                   menuOpen
@@ -171,7 +171,7 @@ export default function Nav() {
           style={{
             position: 'fixed',
             inset: 0,
-            background: 'var(--obsidian)',
+            background: 'var(--cream)',
             zIndex: 80,
             display: 'flex',
             flexDirection: 'column',
@@ -194,7 +194,7 @@ export default function Nav() {
               cursor: 'pointer',
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1.5rem',
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
             }}
           >
             ✕
@@ -210,13 +210,13 @@ export default function Nav() {
                 fontSize: 'clamp(2rem, 9vw, 2.5rem)',
                 fontWeight: 300,
                 fontStyle: 'italic',
-                color: 'var(--bone)',
+                color: 'var(--charcoal)',
                 textDecoration: 'none',
                 borderBottom: '1px solid transparent',
                 transition: 'border-color 0.2s',
               }}
               onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.borderBottomColor = 'var(--amber)')
+                ((e.target as HTMLElement).style.borderBottomColor = 'var(--sage)')
               }
               onMouseLeave={(e) =>
                 ((e.target as HTMLElement).style.borderBottomColor = 'transparent')
@@ -233,7 +233,7 @@ export default function Nav() {
               style={{
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.85rem',
-                color: 'var(--amber)',
+                color: 'var(--sage-deep)',
                 textDecoration: 'none',
                 letterSpacing: '0.05em',
               }}
@@ -247,7 +247,7 @@ export default function Nav() {
               style={{
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.85rem',
-                color: 'var(--pewter)',
+                color: 'var(--muted)',
                 textDecoration: 'none',
                 letterSpacing: '0.05em',
               }}
@@ -287,17 +287,17 @@ function ExternalBtn({
 
   const primaryStyle: React.CSSProperties = {
     ...baseStyle,
-    border: '0.5px solid var(--amber)',
-    color: hovered ? 'var(--obsidian)' : 'var(--amber)',
-    background: hovered ? 'var(--amber)' : 'transparent',
+    border: '0.5px solid var(--sage)',
+    color: hovered ? 'var(--cream)' : 'var(--sage-deep)',
+    background: hovered ? 'var(--sage)' : 'transparent',
   }
 
   const ghostStyle: React.CSSProperties = {
     ...baseStyle,
     border: hovered
-      ? '0.5px solid var(--amber)'
-      : '0.5px solid rgba(212,201,184,0.4)',
-    color: hovered ? 'var(--amber)' : 'var(--pewter)',
+      ? '0.5px solid var(--sage)'
+      : '0.5px solid rgba(44,44,42,0.3)',
+    color: hovered ? 'var(--sage-deep)' : 'var(--muted)',
     background: 'transparent',
   }
 

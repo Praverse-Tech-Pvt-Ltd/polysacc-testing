@@ -15,13 +15,14 @@ export default function PortfolioPage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--obsidian)',
+          background: 'var(--cream)',
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
+          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
         }}
         className="page-hero"
       >
-        <MolecularPattern variant="dark" />
+        <MolecularPattern variant="light" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-tag" style={{ marginBottom: '1rem' }}>
             Portfolio
@@ -31,7 +32,7 @@ export default function PortfolioPage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(3rem, 6vw, 6rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.05,
               marginBottom: '1.75rem',
               maxWidth: 760,
@@ -44,7 +45,7 @@ export default function PortfolioPage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1.05rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               maxWidth: 520,
               lineHeight: 1.75,
             }}
@@ -56,13 +57,13 @@ export default function PortfolioPage() {
       </section>
 
       {/* Elmiron card */}
-      <section style={{ background: 'var(--parchment)', padding: '8rem 6rem' }} className="section-pad">
+      <section style={{ background: 'var(--sage-pale)', padding: '8rem 6rem' }} className="section-pad">
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div
             style={{
-              background: 'var(--bone)',
-              border: '0.5px solid rgba(42,42,38,0.12)',
-              borderLeft: '4px solid var(--amber)',
+              background: 'var(--cream)',
+              border: '0.5px solid rgba(138,171,138,0.3)',
+              borderLeft: '4px solid var(--sage)',
               padding: '4rem',
             }}
             className="mobile-card-pad-lg"
@@ -82,8 +83,8 @@ export default function PortfolioPage() {
                 <span
                   style={{
                     display: 'inline-block',
-                    background: 'var(--amber-pale)',
-                    color: 'var(--amber)',
+                    background: 'rgba(138,171,138,0.2)',
+                    color: 'var(--sage-deep)',
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.7rem',
                     fontWeight: 500,
@@ -100,7 +101,7 @@ export default function PortfolioPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                     fontWeight: 300,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     lineHeight: 1.05,
                     marginBottom: '0.5rem',
                   }}
@@ -112,7 +113,7 @@ export default function PortfolioPage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.95rem',
                     fontWeight: 300,
-                    color: 'var(--pewter)',
+                    color: 'var(--muted)',
                     letterSpacing: '0.04em',
                   }}
                 >
@@ -123,7 +124,7 @@ export default function PortfolioPage() {
                 style={{
                   fontFamily: 'var(--font-jetbrains)',
                   fontSize: '1rem',
-                  color: 'rgba(200,137,58,0.7)',
+                  color: 'var(--sage-deep)',
                   letterSpacing: '0.02em',
                 }}
               >
@@ -131,7 +132,7 @@ export default function PortfolioPage() {
               </p>
             </div>
 
-            <div style={{ borderTop: '0.5px solid rgba(42,42,38,0.12)', marginBottom: '2.5rem' }} />
+            <div style={{ borderTop: '0.5px solid rgba(138,171,138,0.25)', marginBottom: '2.5rem' }} />
 
             <div
               style={{
@@ -154,7 +155,7 @@ export default function PortfolioPage() {
                       fontFamily: 'var(--font-dm-sans)',
                       fontSize: '0.95rem',
                       fontWeight: 300,
-                      color: 'var(--ink)',
+                      color: 'var(--charcoal)',
                       lineHeight: 1.9,
                       marginBottom: '1.5rem',
                     }}
@@ -166,7 +167,7 @@ export default function PortfolioPage() {
 
               {/* Specs table */}
               <div>
-                <p className="section-tag" style={{ color: 'var(--amber)', marginBottom: '1rem' }}>
+                <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>
                   Product Specifications
                 </p>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'var(--font-dm-sans)' }}>
@@ -180,13 +181,13 @@ export default function PortfolioPage() {
                     ['Evidence',      '7 RCTs (5 positive)'],
                     ['Approval',      'FDA-approved API'],
                   ].map(([label, value]) => (
-                    <tr key={label} style={{ borderBottom: '0.5px solid rgba(42,42,38,0.1)' }}>
+                    <tr key={label} style={{ borderBottom: '0.5px solid rgba(138,171,138,0.2)' }}>
                       <td
                         style={{
                           padding: '0.65rem 0',
                           fontSize: '0.75rem',
                           fontWeight: 500,
-                          color: 'var(--pewter)',
+                          color: 'var(--muted)',
                           letterSpacing: '0.05em',
                           textTransform: 'uppercase',
                           width: '45%',
@@ -194,7 +195,7 @@ export default function PortfolioPage() {
                       >
                         {label}
                       </td>
-                      <td style={{ padding: '0.65rem 0', fontSize: '0.85rem', fontWeight: 300, color: 'var(--ink)' }}>
+                      <td style={{ padding: '0.65rem 0', fontSize: '0.85rem', fontWeight: 300, color: 'var(--charcoal)' }}>
                         {value}
                       </td>
                     </tr>
@@ -204,7 +205,6 @@ export default function PortfolioPage() {
             </div>
 
             <div style={{ marginTop: '2.5rem' }}>
-              {/* CSS class handles all hover — no JS handlers needed */}
               <a
                 href="https://elmiron.in"
                 target="_blank"
@@ -219,13 +219,13 @@ export default function PortfolioPage() {
       </section>
 
       {/* Missed Bladder Disease card */}
-      <section style={{ background: 'var(--slate)', padding: '8rem 6rem' }} className="section-pad">
+      <section style={{ background: 'var(--charcoal)', padding: '8rem 6rem' }} className="section-pad">
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div
             style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: '0.5px solid rgba(200,137,58,0.2)',
-              borderLeft: '4px solid var(--amber)',
+              background: 'rgba(255,255,255,0.04)',
+              border: '0.5px solid rgba(138,171,138,0.2)',
+              borderLeft: '4px solid var(--sage)',
               padding: '4rem',
             }}
             className="mobile-card-pad-lg"
@@ -234,8 +234,8 @@ export default function PortfolioPage() {
               <span
                 style={{
                   display: 'inline-block',
-                  background: 'rgba(200,137,58,0.15)',
-                  color: 'var(--amber)',
+                  background: 'rgba(138,171,138,0.15)',
+                  color: 'var(--sage)',
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.7rem',
                   fontWeight: 500,
@@ -252,7 +252,7 @@ export default function PortfolioPage() {
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                   fontWeight: 300,
-                  color: 'var(--bone)',
+                  color: 'var(--cream)',
                   lineHeight: 1.05,
                   marginBottom: '0.5rem',
                 }}
@@ -264,7 +264,7 @@ export default function PortfolioPage() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.95rem',
                   fontWeight: 300,
-                  color: 'var(--pewter)',
+                  color: 'var(--sage-light)',
                   letterSpacing: '0.04em',
                 }}
               >
@@ -272,7 +272,7 @@ export default function PortfolioPage() {
               </p>
             </div>
 
-            <div style={{ borderTop: '0.5px solid rgba(212,201,184,0.15)', marginBottom: '2.5rem' }} />
+            <div style={{ borderTop: '0.5px solid rgba(138,171,138,0.15)', marginBottom: '2.5rem' }} />
 
             <div
               style={{
@@ -295,7 +295,7 @@ export default function PortfolioPage() {
                       fontFamily: 'var(--font-dm-sans)',
                       fontSize: '0.95rem',
                       fontWeight: 300,
-                      color: 'rgba(212,201,184,0.8)',
+                      color: 'rgba(248,246,241,0.8)',
                       lineHeight: 1.9,
                       marginBottom: '1.5rem',
                     }}
@@ -306,7 +306,7 @@ export default function PortfolioPage() {
               </div>
 
               <div>
-                <p className="section-tag" style={{ color: 'var(--amber)', marginBottom: '1rem' }}>
+                <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>
                   Initiative Details
                 </p>
                 {[
@@ -320,7 +320,7 @@ export default function PortfolioPage() {
                   <div
                     key={label}
                     style={{
-                      borderBottom: '0.5px solid rgba(212,201,184,0.1)',
+                      borderBottom: '0.5px solid rgba(138,171,138,0.12)',
                       padding: '0.65rem 0',
                       display: 'flex',
                       justifyContent: 'space-between',
@@ -332,7 +332,7 @@ export default function PortfolioPage() {
                         fontFamily: 'var(--font-dm-sans)',
                         fontSize: '0.75rem',
                         fontWeight: 500,
-                        color: 'var(--pewter)',
+                        color: 'var(--sage-light)',
                         letterSpacing: '0.05em',
                         textTransform: 'uppercase',
                       }}
@@ -344,7 +344,7 @@ export default function PortfolioPage() {
                         fontFamily: 'var(--font-dm-sans)',
                         fontSize: '0.85rem',
                         fontWeight: 300,
-                        color: 'var(--bone)',
+                        color: 'var(--cream)',
                         textAlign: 'right',
                       }}
                     >
@@ -360,7 +360,7 @@ export default function PortfolioPage() {
                 href="https://missedbladderdisease.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-ghost-amber"
+                className="btn-ghost-sage"
               >
                 Visit missedbladderdisease.com ↗
               </a>
@@ -373,14 +373,14 @@ export default function PortfolioPage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--obsidian)',
+          background: 'var(--sage-pale)',
           padding: '8rem 6rem',
           textAlign: 'center',
           overflow: 'hidden',
         }}
         className="section-pad"
       >
-        <MolecularPattern variant="dark" />
+        <MolecularPattern variant="light" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: '620px', margin: '0 auto' }}>
           <p className="section-tag" style={{ marginBottom: '1.25rem' }}>Pipeline</p>
           <h2
@@ -389,7 +389,7 @@ export default function PortfolioPage() {
               fontSize: 'clamp(2.25rem, 4vw, 3.5rem)',
               fontWeight: 300,
               fontStyle: 'italic',
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.2,
               marginBottom: '1.25rem',
             }}
@@ -401,7 +401,7 @@ export default function PortfolioPage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               lineHeight: 1.8,
               marginBottom: '2.5rem',
             }}
@@ -409,7 +409,7 @@ export default function PortfolioPage() {
             Additional polysaccharide-based therapeutics are in development. Enquire for
             partnership and licensing opportunities.
           </p>
-          <Link href="/contact" className="contact-section-link">
+          <Link href="/contact" className="btn-ghost-sage">
             Contact Us
           </Link>
         </div>

@@ -25,7 +25,7 @@ export default function ScienceSection() {
       ref={ref}
       style={{
         position: 'relative',
-        background: 'var(--parchment)',
+        background: 'var(--sage-pale)',
         padding: '8rem 6rem',
         overflow: 'hidden',
       }}
@@ -51,7 +51,7 @@ export default function ScienceSection() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2rem, 4vw, 3rem)',
               fontWeight: 300,
-              color: 'var(--ink)',
+              color: 'var(--charcoal)',
               lineHeight: 1.15,
               marginBottom: '1.25rem',
               maxWidth: 640,
@@ -65,7 +65,7 @@ export default function ScienceSection() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               maxWidth: 600,
               lineHeight: 1.75,
               marginBottom: '4rem',
@@ -77,7 +77,7 @@ export default function ScienceSection() {
           </p>
         </motion.div>
 
-        {/* 3-column card grid — 1px gap on parchment = visible dividers */}
+        {/* 3-column card grid */}
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -86,7 +86,7 @@ export default function ScienceSection() {
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '1px',
-            background: 'var(--parchment)',
+            background: 'rgba(138,171,138,0.2)',
           }}
           className="responsive-three"
         >
@@ -95,7 +95,7 @@ export default function ScienceSection() {
               key={pillar.name}
               variants={fadeUp}
               style={{
-                background: 'var(--bone)',
+                background: 'var(--cream)',
                 padding: '2.5rem 2rem',
               }}
               className="mobile-card-pad"
@@ -106,7 +106,7 @@ export default function ScienceSection() {
                   fontFamily: 'var(--font-jetbrains)',
                   fontSize: '1.1rem',
                   fontWeight: 400,
-                  color: 'var(--amber)',
+                  color: 'var(--sage-deep)',
                   marginBottom: '0.75rem',
                   letterSpacing: '0.02em',
                 }}
@@ -117,7 +117,7 @@ export default function ScienceSection() {
                 style={{
                   width: 30,
                   height: '0.5px',
-                  background: 'var(--amber)',
+                  background: 'var(--sage)',
                   marginBottom: '1.25rem',
                 }}
               />
@@ -127,7 +127,7 @@ export default function ScienceSection() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '1rem',
                   fontWeight: 500,
-                  color: 'var(--ink)',
+                  color: 'var(--charcoal)',
                   marginBottom: '0.9rem',
                   lineHeight: 1.3,
                 }}
@@ -140,7 +140,7 @@ export default function ScienceSection() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.88rem',
                   fontWeight: 300,
-                  color: 'var(--pewter)',
+                  color: 'var(--muted)',
                   lineHeight: 1.8,
                 }}
               >

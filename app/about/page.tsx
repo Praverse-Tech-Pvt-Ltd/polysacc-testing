@@ -33,13 +33,14 @@ export default function AboutPage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--obsidian)',
+          background: 'var(--cream)',
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
+          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
         }}
         className="page-hero"
       >
-        <MolecularPattern variant="dark" />
+        <MolecularPattern variant="light" />
         <div
           style={{
             position: 'relative',
@@ -56,7 +57,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(3rem, 6vw, 6rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.05,
               marginBottom: '1.75rem',
               maxWidth: 800,
@@ -69,7 +70,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1.05rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               maxWidth: 580,
               lineHeight: 1.75,
             }}
@@ -83,7 +84,7 @@ export default function AboutPage() {
       {/* Origin */}
       <section
         style={{
-          background: 'var(--bone)',
+          background: 'var(--cream)',
           padding: '8rem 6rem',
         }}
         className="section-pad"
@@ -109,7 +110,7 @@ export default function AboutPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(3rem, 15vw, 5rem)',
                 fontWeight: 300,
-                color: 'var(--amber)',
+                color: 'var(--sage)',
                 lineHeight: 1,
                 marginBottom: '0.5rem',
               }}
@@ -121,7 +122,7 @@ export default function AboutPage() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.85rem',
                 fontWeight: 300,
-                color: 'var(--pewter)',
+                color: 'var(--muted)',
                 lineHeight: 1.7,
               }}
             >
@@ -144,7 +145,7 @@ export default function AboutPage() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '1rem',
                   fontWeight: 300,
-                  color: 'var(--ink)',
+                  color: 'var(--charcoal)',
                   lineHeight: 1.9,
                   marginBottom: '1.75rem',
                 }}
@@ -159,7 +160,7 @@ export default function AboutPage() {
       {/* Philosophy */}
       <section
         style={{
-          background: 'var(--parchment)',
+          background: 'var(--sage-pale)',
           padding: '8rem 6rem',
         }}
         className="section-pad"
@@ -173,7 +174,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2rem, 4vw, 3rem)',
               fontWeight: 300,
-              color: 'var(--ink)',
+              color: 'var(--charcoal)',
               lineHeight: 1.15,
               marginBottom: '4rem',
             }}
@@ -186,7 +187,7 @@ export default function AboutPage() {
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '1px',
-              background: 'var(--parchment)',
+              background: 'rgba(138,171,138,0.2)',
             }}
             className="responsive-three"
           >
@@ -194,7 +195,7 @@ export default function AboutPage() {
               <div
                 key={i}
                 style={{
-                  background: 'var(--bone)',
+                  background: 'var(--cream)',
                   padding: '2.5rem 2rem',
                 }}
                 className="mobile-card-pad"
@@ -204,10 +205,10 @@ export default function AboutPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '3.5rem',
                     fontWeight: 300,
-                    color: 'var(--amber)',
+                    color: 'var(--sage)',
                     lineHeight: 1,
                     marginBottom: '1.5rem',
-                    opacity: 0.3,
+                    opacity: 0.4,
                   }}
                 >
                   0{i + 1}
@@ -217,7 +218,7 @@ export default function AboutPage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '1rem',
                     fontWeight: 500,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     marginBottom: '0.9rem',
                     letterSpacing: '0.02em',
                   }}
@@ -229,7 +230,7 @@ export default function AboutPage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.88rem',
                     fontWeight: 300,
-                    color: 'var(--pewter)',
+                    color: 'var(--muted)',
                     lineHeight: 1.8,
                   }}
                 >
@@ -244,7 +245,7 @@ export default function AboutPage() {
       {/* Address */}
       <section
         style={{
-          background: 'var(--slate)',
+          background: 'var(--charcoal)',
           padding: '6rem',
           textAlign: 'center',
         }}
@@ -263,7 +264,7 @@ export default function AboutPage() {
             >
               <path
                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                fill="rgba(200,137,58,0.7)"
+                fill="rgba(138,171,138,0.7)"
               />
             </svg>
           </div>
@@ -277,7 +278,7 @@ export default function AboutPage() {
               fontSize: '1.75rem',
               fontWeight: 300,
               fontStyle: 'italic',
-              color: 'var(--bone)',
+              color: 'var(--cream)',
               lineHeight: 1.4,
               marginBottom: '1.5rem',
             }}
@@ -291,7 +292,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.9rem',
               fontWeight: 300,
-              color: 'rgba(212,201,184,0.6)',
+              color: 'rgba(248,246,241,0.6)',
               lineHeight: 2,
               fontStyle: 'normal',
             }}

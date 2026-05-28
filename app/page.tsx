@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* Contact section */}
       <section
         style={{
-          background: 'var(--slate)',
+          background: 'var(--charcoal)',
           padding: '8rem 6rem',
         }}
         className="section-pad"
@@ -44,7 +44,7 @@ export default function HomePage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
                 fontWeight: 300,
-                color: 'var(--bone)',
+                color: 'var(--cream)',
                 lineHeight: 1.2,
                 marginBottom: '1.25rem',
               }}
@@ -56,7 +56,7 @@ export default function HomePage() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '1rem',
                 fontWeight: 300,
-                color: 'var(--pewter)',
+                color: 'var(--sage-light)',
                 lineHeight: 1.8,
                 marginBottom: '2.5rem',
               }}
@@ -69,7 +69,7 @@ export default function HomePage() {
             <div style={{ marginBottom: '2rem' }}>
               <p
                 className="section-tag"
-                style={{ color: 'var(--amber)', marginBottom: '0.75rem' }}
+                style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}
               >
                 Registered Office
               </p>
@@ -78,7 +78,7 @@ export default function HomePage() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.9rem',
                   fontWeight: 300,
-                  color: 'rgba(212,201,184,0.7)',
+                  color: 'rgba(248,246,241,0.65)',
                   lineHeight: 2,
                   fontStyle: 'normal',
                 }}
@@ -90,7 +90,6 @@ export default function HomePage() {
                 {COMPANY.address.state}
               </address>
             </div>
-
           </div>
 
           {/* Right: form */}

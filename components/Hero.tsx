@@ -26,7 +26,7 @@ export default function Hero() {
       style={{
         position: 'relative',
         minHeight: '100vh',
-        background: 'var(--obsidian)',
+        background: 'var(--cream)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -36,10 +36,10 @@ export default function Hero() {
         overflow: 'hidden',
       }}
     >
-      <MolecularPattern variant="dark" />
+      <MolecularPattern variant="light" />
 
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 820, width: '100%' }}>
-        {/* Section tag — ShinyText amber shine */}
+        {/* Section tag */}
         <motion.div
           custom={0}
           variants={fadeUp}
@@ -58,8 +58,8 @@ export default function Hero() {
           >
             <ShinyText
               text="Polysaccharide Chemistry Pvt Ltd"
-              color="rgba(200,137,58,0.7)"
-              shineColor="#f5e9d6"
+              color="rgba(138,171,138,0.7)"
+              shineColor="#4a7a4a"
               speed={4}
               spread={90}
             />
@@ -68,13 +68,13 @@ export default function Hero() {
             style={{
               width: 60,
               height: '0.5px',
-              background: 'rgba(200,137,58,0.6)',
+              background: 'rgba(138,171,138,0.6)',
               margin: '0 auto 3rem',
             }}
           />
         </motion.div>
 
-        {/* Heading — BlurText word-by-word reveal */}
+        {/* Heading */}
         <h1
           style={{
             fontFamily: 'var(--font-cormorant)',
@@ -90,7 +90,7 @@ export default function Hero() {
             tag="div"
             style={{
               fontStyle: 'italic',
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               justifyContent: 'center',
               marginBottom: '0.1em',
             }}
@@ -102,7 +102,7 @@ export default function Hero() {
             text="polysaccharide therapeutics"
             tag="div"
             style={{
-              color: 'var(--amber)',
+              color: 'var(--sage)',
               justifyContent: 'center',
             }}
             delay={100}
@@ -121,7 +121,7 @@ export default function Hero() {
             fontFamily: 'var(--font-dm-sans)',
             fontSize: '1.05rem',
             fontWeight: 300,
-            color: 'var(--pewter)',
+            color: 'var(--muted)',
             maxWidth: 560,
             margin: '0 auto 3rem',
             lineHeight: 1.7,
@@ -147,7 +147,7 @@ export default function Hero() {
           <Link href="/portfolio" className="btn-primary">
             Our Portfolio
           </Link>
-          <Link href="/about" className="btn-ghost-bone">
+          <Link href="/about" className="btn-ghost-charcoal">
             About the Company
           </Link>
         </motion.div>
@@ -165,7 +165,7 @@ export default function Hero() {
               width: '100%',
               maxWidth: 400,
               margin: '0 auto',
-              borderTop: '0.5px solid rgba(212,201,184,0.15)',
+              borderTop: '0.5px solid rgba(138,171,138,0.25)',
               paddingTop: '1.5rem',
             }}
           />
@@ -174,7 +174,7 @@ export default function Hero() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.78rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
             }}

@@ -14,7 +14,7 @@ const colHeading: React.CSSProperties = {
   fontWeight: 500,
   letterSpacing: '0.18em',
   textTransform: 'uppercase',
-  color: 'var(--linen)',
+  color: 'var(--sage-light)',
   marginBottom: '1.25rem',
 }
 
@@ -22,8 +22,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: 'var(--obsidian)',
-        borderTop: '0.5px solid rgba(200,137,58,0.2)',
+        background: 'var(--charcoal)',
+        borderTop: '0.5px solid rgba(138,171,138,0.2)',
         padding: '4rem 6rem 2rem',
       }}
     >
@@ -47,7 +47,7 @@ export default function Footer() {
                 fontSize: '0.75rem',
                 fontWeight: 500,
                 letterSpacing: '0.2em',
-                color: 'var(--amber)',
+                color: 'var(--sage)',
                 textTransform: 'uppercase',
                 marginBottom: '2px',
               }}
@@ -60,7 +60,7 @@ export default function Footer() {
                 fontSize: '0.6rem',
                 fontWeight: 300,
                 letterSpacing: '0.15em',
-                color: 'var(--pewter)',
+                color: 'var(--sage-light)',
                 textTransform: 'uppercase',
               }}
             >
@@ -72,7 +72,7 @@ export default function Footer() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.85rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--sage-light)',
               lineHeight: '1.8',
               maxWidth: 280,
             }}
@@ -100,7 +100,7 @@ export default function Footer() {
             href="https://elmiron.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="footer-link-amber"
+            className="footer-link-sage"
           >
             Elmiron® ↗
           </a>
@@ -108,7 +108,7 @@ export default function Footer() {
             href="https://missedbladderdisease.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="footer-link-amber"
+            className="footer-link-sage"
           >
             Missed Bladder Disease ↗
           </a>
@@ -122,7 +122,7 @@ export default function Footer() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.8rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--sage-light)',
               lineHeight: '1.8',
               fontStyle: 'normal',
               marginTop: '0.5rem',
@@ -139,7 +139,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div
         style={{
-          borderTop: '0.5px solid rgba(212,201,184,0.15)',
+          borderTop: '0.5px solid rgba(138,171,138,0.15)',
           paddingTop: '1.5rem',
           display: 'flex',
           justifyContent: 'space-between',
@@ -153,7 +153,7 @@ export default function Footer() {
             fontFamily: 'var(--font-dm-sans)',
             fontSize: '0.75rem',
             fontWeight: 300,
-            color: 'rgba(138,138,130,0.5)',
+            color: 'rgba(184,205,184,0.4)',
             letterSpacing: '0.03em',
           }}
         >
@@ -164,7 +164,7 @@ export default function Footer() {
             fontFamily: 'var(--font-dm-sans)',
             fontSize: '0.75rem',
             fontWeight: 300,
-            color: 'rgba(138,138,130,0.5)',
+            color: 'rgba(184,205,184,0.4)',
             letterSpacing: '0.03em',
           }}
         >

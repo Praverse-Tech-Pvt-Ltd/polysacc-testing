@@ -14,8 +14,9 @@ export default function ContactPage() {
       {/* Hero */}
       <section
         style={{
-          background: 'var(--obsidian)',
+          background: 'var(--cream)',
           padding: '14rem 6rem 6rem',
+          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
         }}
         className="page-hero"
       >
@@ -28,7 +29,7 @@ export default function ContactPage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(3rem, 5vw, 5rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.1,
               marginBottom: '1.25rem',
               maxWidth: 680,
@@ -41,7 +42,7 @@ export default function ContactPage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               maxWidth: 520,
               lineHeight: 1.75,
             }}
@@ -55,7 +56,7 @@ export default function ContactPage() {
       {/* Contact section */}
       <section
         style={{
-          background: 'var(--slate)',
+          background: 'var(--charcoal)',
           padding: '8rem 6rem',
         }}
         className="section-pad"
@@ -81,7 +82,7 @@ export default function ContactPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3vw, 2.5rem)',
                 fontWeight: 300,
-                color: 'var(--bone)',
+                color: 'var(--cream)',
                 lineHeight: 1.2,
                 marginBottom: '1.25rem',
               }}
@@ -93,7 +94,7 @@ export default function ContactPage() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.95rem',
                 fontWeight: 300,
-                color: 'var(--pewter)',
+                color: 'var(--sage-light)',
                 lineHeight: 1.8,
                 marginBottom: '3rem',
               }}
@@ -107,7 +108,7 @@ export default function ContactPage() {
             <div style={{ marginBottom: '2.5rem' }}>
               <p
                 className="section-tag"
-                style={{ color: 'var(--amber)', marginBottom: '0.75rem' }}
+                style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}
               >
                 Registered Office
               </p>
@@ -116,7 +117,7 @@ export default function ContactPage() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.9rem',
                   fontWeight: 300,
-                  color: 'rgba(212,201,184,0.65)',
+                  color: 'rgba(248,246,241,0.65)',
                   lineHeight: 2,
                   fontStyle: 'normal',
                 }}
@@ -129,10 +130,10 @@ export default function ContactPage() {
               </address>
             </div>
 
-            {/* Embedded map placeholder */}
+            {/* Embedded map */}
             <div
               style={{
-                border: '0.5px solid rgba(212,201,184,0.2)',
+                border: '0.5px solid rgba(138,171,138,0.2)',
                 overflow: 'hidden',
               }}
             >
@@ -157,7 +158,7 @@ export default function ContactPage() {
                 fontWeight: 500,
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
-                color: 'var(--linen)',
+                color: 'var(--sage-light)',
                 marginBottom: '1.5rem',
               }}
             >

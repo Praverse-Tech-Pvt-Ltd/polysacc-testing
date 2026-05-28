@@ -15,13 +15,14 @@ export default function SciencePage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--obsidian)',
+          background: 'var(--cream)',
           padding: '14rem 6rem 8rem',
           overflow: 'hidden',
+          borderBottom: '0.5px solid rgba(138,171,138,0.25)',
         }}
         className="page-hero"
       >
-        <MolecularPattern variant="dark" />
+        <MolecularPattern variant="light" />
         <div
           style={{
             position: 'relative',
@@ -38,7 +39,7 @@ export default function SciencePage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(3rem, 6vw, 6rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--charcoal)',
               lineHeight: 1.05,
               marginBottom: '1.75rem',
               maxWidth: 820,
@@ -51,7 +52,7 @@ export default function SciencePage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1.05rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               maxWidth: 580,
               lineHeight: 1.75,
             }}
@@ -64,7 +65,7 @@ export default function SciencePage() {
 
       {/* What is a Polysaccharide */}
       <section
-        style={{ background: 'var(--bone)', padding: '8rem 6rem' }}
+        style={{ background: 'var(--cream)', padding: '8rem 6rem' }}
         className="section-pad"
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -86,7 +87,7 @@ export default function SciencePage() {
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
                   fontWeight: 300,
-                  color: 'var(--ink)',
+                  color: 'var(--charcoal)',
                   lineHeight: 1.2,
                   marginBottom: '1.25rem',
                 }}
@@ -97,15 +98,15 @@ export default function SciencePage() {
                 style={{
                   width: 40,
                   height: '0.5px',
-                  background: 'var(--amber)',
+                  background: 'var(--sage)',
                   marginBottom: '2rem',
                 }}
               />
               {/* Molecular formula display */}
               <div
                 style={{
-                  background: 'var(--parchment)',
-                  border: '0.5px solid rgba(42,42,38,0.12)',
+                  background: 'var(--sage-pale)',
+                  border: '0.5px solid rgba(138,171,138,0.3)',
                   padding: '1.5rem',
                   marginBottom: '2rem',
                 }}
@@ -114,7 +115,7 @@ export default function SciencePage() {
                   style={{
                     fontFamily: 'var(--font-jetbrains)',
                     fontSize: '1.2rem',
-                    color: 'var(--amber)',
+                    color: 'var(--sage-deep)',
                     marginBottom: '0.5rem',
                   }}
                 >
@@ -125,7 +126,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.78rem',
                     fontWeight: 300,
-                    color: 'var(--pewter)',
+                    color: 'var(--muted)',
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                   }}
@@ -146,7 +147,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '1rem',
                     fontWeight: 300,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     lineHeight: 1.9,
                     marginBottom: '1.5rem',
                   }}
@@ -163,7 +164,7 @@ export default function SciencePage() {
       <section
         style={{
           position: 'relative',
-          background: 'var(--parchment)',
+          background: 'var(--sage-pale)',
           padding: '8rem 6rem',
           overflow: 'hidden',
         }}
@@ -180,7 +181,7 @@ export default function SciencePage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
                 fontWeight: 300,
-                color: 'var(--ink)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.2,
                 marginBottom: '1.25rem',
               }}
@@ -191,7 +192,7 @@ export default function SciencePage() {
               style={{
                 width: 40,
                 height: '0.5px',
-                background: 'var(--amber)',
+                background: 'var(--sage)',
                 marginBottom: '2rem',
               }}
             />
@@ -217,7 +218,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '1rem',
                     fontWeight: 300,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     lineHeight: 1.9,
                     marginBottom: '1.5rem',
                   }}
@@ -237,7 +238,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '1rem',
                     fontWeight: 300,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     lineHeight: 1.9,
                     marginBottom: '1.5rem',
                   }}
@@ -252,7 +253,7 @@ export default function SciencePage() {
 
       {/* PPS as Biomimetic Therapy */}
       <section
-        style={{ background: 'var(--slate)', padding: '8rem 6rem' }}
+        style={{ background: 'var(--charcoal)', padding: '8rem 6rem' }}
         className="section-pad"
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -264,7 +265,7 @@ export default function SciencePage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
               fontWeight: 300,
-              color: 'var(--bone)',
+              color: 'var(--cream)',
               lineHeight: 1.2,
               marginBottom: '3.5rem',
               maxWidth: 640,
@@ -278,7 +279,7 @@ export default function SciencePage() {
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gap: '1px',
-              background: 'rgba(212,201,184,0.15)',
+              background: 'rgba(138,171,138,0.15)',
             }}
             className="responsive-three"
           >
@@ -302,9 +303,9 @@ export default function SciencePage() {
               <div
                 key={card.title}
                 style={{
-                  background: 'var(--slate)',
+                  background: 'var(--charcoal)',
                   padding: '2.5rem 2rem',
-                  borderLeft: '0.5px solid rgba(212,201,184,0.15)',
+                  borderLeft: '0.5px solid rgba(138,171,138,0.15)',
                 }}
                 className="mobile-card-pad"
               >
@@ -312,7 +313,7 @@ export default function SciencePage() {
                   style={{
                     fontFamily: 'var(--font-jetbrains)',
                     fontSize: '1rem',
-                    color: 'var(--amber)',
+                    color: 'var(--sage)',
                     marginBottom: '0.75rem',
                   }}
                 >
@@ -322,7 +323,7 @@ export default function SciencePage() {
                   style={{
                     width: 30,
                     height: '0.5px',
-                    background: 'var(--amber)',
+                    background: 'var(--sage)',
                     marginBottom: '1.25rem',
                   }}
                 />
@@ -331,7 +332,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '1rem',
                     fontWeight: 500,
-                    color: 'var(--bone)',
+                    color: 'var(--cream)',
                     marginBottom: '0.9rem',
                   }}
                 >
@@ -342,7 +343,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.88rem',
                     fontWeight: 300,
-                    color: 'var(--pewter)',
+                    color: 'var(--sage-light)',
                     lineHeight: 1.8,
                   }}
                 >
@@ -356,7 +357,7 @@ export default function SciencePage() {
 
       {/* Clinical Evidence */}
       <section
-        style={{ background: 'var(--bone)', padding: '8rem 6rem' }}
+        style={{ background: 'var(--cream)', padding: '8rem 6rem' }}
         className="section-pad"
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -368,7 +369,7 @@ export default function SciencePage() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(2rem, 3.5vw, 2.75rem)',
               fontWeight: 300,
-              color: 'var(--ink)',
+              color: 'var(--charcoal)',
               lineHeight: 1.2,
               marginBottom: '0.75rem',
             }}
@@ -380,7 +381,7 @@ export default function SciencePage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '1rem',
               fontWeight: 300,
-              color: 'var(--pewter)',
+              color: 'var(--muted)',
               marginBottom: '4rem',
               lineHeight: 1.7,
             }}
@@ -388,12 +389,12 @@ export default function SciencePage() {
             PPS has one of the most robust evidence bases in urogynaecology.
           </p>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'rgba(42,42,38,0.12)' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: 'rgba(138,171,138,0.2)' }}>
             {CLINICAL_STUDIES.map((study, i) => (
               <div
                 key={i}
                 style={{
-                  background: 'var(--bone)',
+                  background: 'var(--cream)',
                   padding: '2rem 2.5rem',
                   display: 'grid',
                   gridTemplateColumns: '240px 1fr',
@@ -408,7 +409,7 @@ export default function SciencePage() {
                       fontFamily: 'var(--font-dm-sans)',
                       fontSize: '0.85rem',
                       fontWeight: 500,
-                      color: 'var(--ink)',
+                      color: 'var(--charcoal)',
                       marginBottom: '0.35rem',
                     }}
                   >
@@ -419,7 +420,7 @@ export default function SciencePage() {
                       fontFamily: 'var(--font-dm-sans)',
                       fontSize: '0.78rem',
                       fontWeight: 300,
-                      color: 'var(--pewter)',
+                      color: 'var(--muted)',
                       marginBottom: '0.35rem',
                     }}
                   >
@@ -429,7 +430,7 @@ export default function SciencePage() {
                     style={{
                       fontFamily: 'var(--font-jetbrains)',
                       fontSize: '0.75rem',
-                      color: 'rgba(200,137,58,0.8)',
+                      color: 'var(--sage-deep)',
                     }}
                   >
                     {study.year} · {study.patients} patients
@@ -440,7 +441,7 @@ export default function SciencePage() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.92rem',
                     fontWeight: 300,
-                    color: 'var(--ink)',
+                    color: 'var(--charcoal)',
                     lineHeight: 1.8,
                   }}
                 >
