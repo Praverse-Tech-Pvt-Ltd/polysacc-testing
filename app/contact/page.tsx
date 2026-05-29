@@ -134,37 +134,48 @@ export default function ContactPage() {
               </address>
             </div>
 
-            {/* Direct contact */}
-            <div style={{ marginBottom: '2.5rem' }}>
-              <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}>
-                Direct Contact
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div>
-                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage-light)', marginBottom: '0.2rem' }}>
-                    CTO &amp; Promoter
-                  </p>
-                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 400, color: 'var(--cream)', marginBottom: '0.15rem' }}>
-                    Pratham Shrivastav
-                  </p>
-                  <a
-                    href="mailto:pratham@polysacc.com"
-                    style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--sage)', textDecoration: 'none', transition: 'color 0.2s' }}
-                  >
-                    pratham@polysacc.com
-                  </a>
-                </div>
-                <div>
-                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage-light)', marginBottom: '0.2rem' }}>
-                    Medical Affairs
-                  </p>
-                  <a
-                    href="mailto:elmiron@elmiron.in"
-                    style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--sage)', textDecoration: 'none', transition: 'color 0.2s' }}
-                  >
-                    elmiron@elmiron.in
-                  </a>
-                </div>
+            {/* Email & Phone */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
+              <div>
+                <p
+                  className="section-tag"
+                  style={{ color: 'var(--amber)', marginBottom: '0.35rem' }}
+                >
+                  Contact Person
+                </p>
+                <a
+                  href={`mailto:${COMPANY.email}`}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.9rem',
+                    fontWeight: 300,
+                    color: 'var(--amber)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s',
+                  }}
+                >
+                  {COMPANY.contactPerson}, {COMPANY.contactRole} · {COMPANY.email}
+                </a>
+              </div>
+              <div>
+                <p
+                  className="section-tag"
+                  style={{ color: 'var(--amber)', marginBottom: '0.35rem' }}
+                >
+                  Phone
+                </p>
+                <a
+                  href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.9rem',
+                    fontWeight: 300,
+                    color: 'var(--pewter)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {COMPANY.phone}
+                </a>
               </div>
             </div>
 

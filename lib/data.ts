@@ -10,17 +10,19 @@ export const COMPANY = {
     state: 'Maharashtra, India',
     full: '404 & 405, Floor 4, Sona Chambers, Jagannath Shankarsheth Marg, Kamathiwadi, Chira Bazar, Kalbadevi, Mumbai – 400002',
   },
-  email: 'elmiron@elmiron.in',
+  contactPerson: 'Ms Kanchan Londhe',
+  contactRole: 'BD Head',
+  email: 'kanchan.londhe@swatispentose.com',
   phone: '+91 80972 53466',
 } as const
 
 export const LEADERSHIP = [
   {
-    name: 'Pratham Shrivastav',
-    title: 'Chief Technology Officer',
-    role: 'CTO & Promoter',
-    email: 'pratham@polysacc.com',
-    bio: 'Pratham Shrivastav is the CTO and Promoter of Polysaccharide Chemistry Pvt Ltd, overseeing the technology and digital infrastructure across the company\'s pharmaceutical and medical education platforms, including Elmiron® and the Missed Bladder Disease initiative.',
+    name: 'Ms Kanchan Londhe',
+    title: 'Business Development Head',
+    role: 'BD Head',
+    email: 'kanchan.londhe@swatispentose.com',
+    bio: 'Ms Kanchan Londhe leads business development enquiries for Polysaccharide Chemistry Pvt Ltd, supporting partnerships, distribution conversations, and stakeholder coordination.',
   },
 ] as const
 

@@ -31,7 +31,7 @@ All three sites carry identical footer details:
 
 - **Company:** Polysaccharide Chemistry Pvt Ltd
 - **Registered Office:** 404 & 405, Floor 4, Sona Chambers, Jagannath Shankarsheth Marg, Kamathiwadi, Chira Bazar, Kalbadevi, Mumbai – 400002, Maharashtra, India
-- **CTO & Promoter:** Pratham Shrivastav — pratham@polysacc.com
+- **BD Head:** Ms Kanchan Londhe — kanchan.londhe@swatispentose.com
 - **Copyright:** © 2026 Polysaccharide Chemistry Pvt Ltd. All rights reserved.
 
 **Verification:** All three footers were directly fetched and match verbatim.
@@ -227,7 +227,7 @@ All three sites consistently target healthcare professionals, not consumers, and
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │               Polysaccharide Chemistry Pvt Ltd                   │
-│               Mumbai, India │ pratham@polysacc.com               │
+│               Mumbai, India │ kanchan.londhe@swatispentose.com   │
 └────────────────────┬────────────────────┬───────────────────────┘
                      │                    │
           ┌──────────▼──────────┐  ┌──────▼────────────────────────┐
@@ -255,7 +255,7 @@ All three sites share:
 - **Same topic:** IC/BPS and Pentosan Polysulfate Sodium therapy
 - **Same scientific foundation:** GAG layer restoration, 35+ years PPS evidence
 - **Same initiative:** Missed Bladder Disease (Dr Sanjay Pandey / Team BladderHealthWomen)
-- **Same contact:** Pratham Shrivastav, CTO — pratham@polysacc.com
+- **Same contact:** Ms Kanchan Londhe, BD Head — kanchan.londhe@swatispentose.com
 - **Same address:** 404 & 405, Sona Chambers, Kalbadevi, Mumbai 400002
 
 ---

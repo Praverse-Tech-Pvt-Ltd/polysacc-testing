@@ -90,6 +90,34 @@ export default function HomePage() {
                 {COMPANY.address.state}
               </address>
             </div>
+            <a
+              href={`mailto:${COMPANY.email}`}
+              style={{
+                display: 'block',
+                fontFamily: 'var(--font-dm-sans)',
+                fontSize: '0.9rem',
+                fontWeight: 300,
+                color: 'var(--amber)',
+                textDecoration: 'none',
+                marginBottom: '0.5rem',
+                transition: 'color 0.2s',
+              }}
+            >
+              {COMPANY.contactPerson}, {COMPANY.contactRole} · {COMPANY.email}
+            </a>
+            <a
+              href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}
+              style={{
+                display: 'block',
+                fontFamily: 'var(--font-dm-sans)',
+                fontSize: '0.9rem',
+                fontWeight: 300,
+                color: 'var(--pewter)',
+                textDecoration: 'none',
+              }}
+            >
+              {COMPANY.phone}
+            </a>
           </div>
 
           {/* Right: form */}
