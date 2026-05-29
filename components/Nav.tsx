@@ -30,7 +30,7 @@ export default function Nav() {
       <nav
       style={{
         position: 'fixed',
-        top: '2rem',
+        top: 0,
         left: 0,
         right: 0,
         zIndex: 50,
@@ -134,7 +134,6 @@ export default function Nav() {
             background: 'none',
             border: 'none',
             cursor: 'pointer',
-            display: 'flex',
             flexDirection: 'column',
             gap: '5px',
             padding: '4px',

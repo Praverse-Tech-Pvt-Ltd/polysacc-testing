@@ -51,9 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} ${jetbrains.variable}`}>
       <body>
-        <div className="disclaimer-bar">
-          For healthcare professionals and business partners only. This site does not constitute medical advice.
-        </div>
         <Nav />
         <main>{children}</main>
         <Footer />

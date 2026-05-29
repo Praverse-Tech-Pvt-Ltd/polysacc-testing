@@ -73,8 +73,7 @@ export const SCIENCE_PILLARS = [
 export const STATS = [
   { value: '35+', label: 'Years of global clinical evidence behind PPS', unit: 'yrs' },
   { value: '5/7', label: 'Randomised controlled trials confirming efficacy', unit: 'RCTs' },
-  { value: '54%', label: 'Patients reporting >50% improvement (Ali et al, 2011)', unit: '' },
-  { value: '2,809', label: 'Patients in landmark Hanno 1997 open-label study', unit: '' },
+{ value: '2,809', label: 'Patients in landmark Hanno 1997 open-label study', unit: '' },
 ] as const
 
 export const CLINICAL_STUDIES = [
@@ -94,15 +93,7 @@ export const CLINICAL_STUDIES = [
     finding:
       'Landmark open-label study across multiple centres. Demonstrated sustained symptomatic improvement at 32 weeks with an excellent long-term safety profile, establishing the clinical durability of PPS.',
   },
-  {
-    authors: 'Ali S, et al.',
-    year: '2011',
-    journal: 'Urology',
-    patients: '564',
-    finding:
-      '54% of patients reported greater than 50% reduction in symptom burden at 6 months. Confirmed dose-response relationship and durable benefit extending beyond treatment cessation.',
-  },
-  {
+{
     authors: 'Nickel JC, et al.',
     year: '2015',
     journal: 'Canadian Urological Association Journal',

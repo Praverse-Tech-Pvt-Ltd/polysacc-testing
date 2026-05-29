@@ -48,17 +48,7 @@
     color: var(--sage);
   }
 
-  .disclaimer-bar {
-    background: var(--charcoal);
-    color: rgba(248, 246, 241, 0.6);
-    font-size: 0.7rem;
-    text-align: center;
-    padding: 6px 2rem;
-    letter-spacing: 0.08em;
-    border-bottom: 0.5px solid rgba(138, 171, 138, 0.2);
-  }
-
-  .divider-sage {
+.divider-sage {
     border-top: 0.5px solid rgba(138, 171, 138, 0.25);
   }
 
