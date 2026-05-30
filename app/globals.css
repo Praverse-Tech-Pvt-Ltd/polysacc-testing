@@ -12,6 +12,8 @@
   --muted:       #6b6b68;
   --border:      rgba(138, 171, 138, 0.25);
   --hero-grey:   #f1f1ee;
+  --amber:       #b07d3a;
+  --pewter:      #8a8a87;
 }
 
 @layer base {

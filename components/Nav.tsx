@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const NAV_LINKS = [
   { label: 'About', href: '/about' },
@@ -57,32 +58,14 @@ export default function Nav() {
       >
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', lineHeight: 1 }}>
-          <div>
-            <div
-              style={{
-                fontFamily: 'var(--font-dm-sans)',
-                fontSize: '0.75rem',
-                fontWeight: 500,
-                letterSpacing: '0.2em',
-                color: 'var(--sage-deep)',
-                textTransform: 'uppercase',
-              }}
-            >
-              Polysaccharide
-            </div>
-            <div
-              style={{
-                fontFamily: 'var(--font-dm-sans)',
-                fontSize: '0.6rem',
-                fontWeight: 300,
-                letterSpacing: '0.15em',
-                color: 'var(--muted)',
-                textTransform: 'uppercase',
-              }}
-            >
-              Chemistry Pvt Ltd
-            </div>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Polysacc"
+            width={130}
+            height={44}
+            priority
+            style={{ height: 38, width: 'auto', display: 'block' }}
+          />
         </Link>
 
         {/* Desktop nav links */}
