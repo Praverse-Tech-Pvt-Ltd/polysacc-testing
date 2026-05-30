@@ -61,10 +61,10 @@ export default function Nav() {
           <Image
             src="/logo.png"
             alt="Polysacc"
-            width={130}
-            height={44}
+            width={200}
+            height={68}
             priority
-            style={{ height: 38, width: 'auto', display: 'block' }}
+            style={{ height: 52, width: 'auto', display: 'block' }}
           />
         </Link>
 
