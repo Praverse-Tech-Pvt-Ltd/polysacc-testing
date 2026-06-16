@@ -4,7 +4,15 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const NAV_LINKS = [
+type NavLink = {
+  label: string
+  href: string
+  highlight: boolean
+  small: boolean
+  external?: boolean
+}
+
+const NAV_LINKS: NavLink[] = [
   { label: 'About',     href: '/about',      highlight: false, small: false },
   { label: 'Science',   href: '/science',    highlight: false, small: false },
   { label: 'Portfolio', href: '/portfolio',  highlight: false, small: false },
