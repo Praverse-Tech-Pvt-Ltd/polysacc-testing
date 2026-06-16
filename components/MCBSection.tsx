@@ -27,8 +27,82 @@ const MCB_MARKETS = [
   { region: 'USA', growth: 'Absent*', note: 'Rx market essentially MCB-free' },
 ]
 
+const MCB_NARRATIVE = [
+  `The pivotal clinical insight is disarmingly simple: cyanocobalamin is not B12 — it is a precursor your liver converts into B12, assuming hepatic enzymatic capacity is intact. Methylcobalamin is B12 as it exists in human neural tissue. No conversion. No dependency on MTHFR enzyme variants or compromised hepatic function. For most healthy patients, this distinction is metabolically irrelevant. For the growing population with impaired methylation pathways — and for patients where neurological repair is the therapeutic goal — the distinction is clinically decisive.`,
+  `Peripheral neuropathy affects an estimated 2.4% of the global population, with prevalence rising sharply alongside the global diabetes epidemic. In India, diabetic peripheral neuropathy is diagnosed in 30–50% of patients with type 2 diabetes. Methylcobalamin is the first-line neurological adjunct in this indication across India, China, Japan, and most of Southeast Asia — and its superior blood-brain barrier penetration and peripheral nerve tissue retention create a pharmacokinetic advantage that cyanocobalamin cannot replicate.`,
+  `The United States represents an almost paradoxical market gap. MCB is essentially absent from the US Rx market — classified as a supplement rather than a pharmaceutical — yet the clinical evidence base that supports its use in neuropathy is the same evidence base used across Asia and Latin America. This regulatory arbitrage creates a significant white-space opportunity: as US clinicians seek adjunctive approaches to diabetic neuropathy beyond pregabalin and gabapentin, methylcobalamin's re-evaluation as a Schedule-eligible therapeutic is gaining traction.`,
+]
+
 export default function MCBSection() {
   return (
+    <>
+    {/* Narrative section */}
+    <section
+      style={{
+        background: 'var(--sage-pale)',
+        padding: '5rem 6rem',
+        borderBottom: '0.5px solid rgba(138,171,138,0.2)',
+      }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '5rem', alignItems: 'start' }}
+          className="responsive-split"
+        >
+          <div>
+            <p className="section-tag" style={{ marginBottom: '1.5rem' }}>The Neurological Thesis</p>
+            <blockquote
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(1.55rem, 2.4vw, 2.1rem)',
+                fontWeight: 300,
+                fontStyle: 'italic',
+                color: 'var(--charcoal)',
+                lineHeight: 1.35,
+                margin: '0 0 2.5rem',
+                borderLeft: '3px solid var(--sage)',
+                paddingLeft: '1.5rem',
+              }}
+            >
+              "Cyanocobalamin requires two hepatic conversion steps to become biologically active. Methylcobalamin is already there."
+            </blockquote>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {[
+                { val: '2.4%', label: 'Global prevalence of peripheral neuropathy' },
+                { val: '30–50%', label: 'T2DM patients in India with diabetic neuropathy' },
+                { val: '+174%', label: 'MCB API volume growth in Latin America, 2025' },
+              ].map((s) => (
+                <div key={s.val} style={{ borderTop: '0.5px solid rgba(138,171,138,0.4)', paddingTop: '1rem' }}>
+                  <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.9rem', fontWeight: 300, color: 'var(--sage-deep)', margin: '0 0 0.2rem', lineHeight: 1 }}>{s.val}</p>
+                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 300, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {MCB_NARRATIVE.map((para, i) => (
+              <p
+                key={i}
+                style={{
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.9rem',
+                  fontWeight: 300,
+                  color: 'var(--muted)',
+                  lineHeight: 1.9,
+                  margin: 0,
+                  borderTop: i > 0 ? '0.5px solid rgba(138,171,138,0.2)' : 'none',
+                  paddingTop: i > 0 ? '1.25rem' : 0,
+                }}
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       id="mcb"
       style={{
@@ -250,5 +324,6 @@ export default function MCBSection() {
         </div>
       </div>
     </section>
+    </>
   )
 }

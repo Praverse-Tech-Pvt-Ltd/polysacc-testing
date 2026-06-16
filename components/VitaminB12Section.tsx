@@ -34,8 +34,82 @@ const B12_FORMS = [
   },
 ]
 
+const B12_NARRATIVE = [
+  `Vitamin B12 deficiency is called "the great masquerader" — presenting as fatigue, depression, cognitive decline, peripheral neuropathy, megaloblastic anaemia, and in advanced cases, subacute combined degeneration of the spinal cord. The insidious onset and non-specific symptoms mean deficiency can persist for years before diagnosis. By the time neurological symptoms are evident, damage is often partially irreversible.`,
+  `India faces a structural B12 vulnerability unlike almost any other country: 47% of the population follows vegetarian or vegan dietary patterns — and B12 is found almost exclusively in animal-derived foods. Epidemiological surveys consistently show serum B12 deficiency in 47–70% of Indian urban populations. This is not an incidental finding; it is a population-scale deficiency with neurological, metabolic, and cardiovascular consequences playing out across decades.`,
+  `The therapeutic landscape, however, remains dominated by cyanocobalamin — a synthetic form requiring two hepatic conversion steps before biological activity. This legacy dominance reflects historical regulatory pathways and raw material economics, not clinical superiority. Methylcobalamin, the bioactive coenzyme form naturally present in human neural tissue, is now the subject of the most rapid market expansion in cobalamin history: +58.9% API volume growth in 2025, and +174.3% in Latin America alone. The paradigm is shifting from supplementation to targeted neurological therapy.`,
+]
+
 export default function VitaminB12Section() {
   return (
+    <>
+    {/* Narrative strip */}
+    <section
+      style={{
+        background: 'var(--charcoal)',
+        padding: '5rem 6rem',
+        borderBottom: '0.5px solid rgba(138,171,138,0.12)',
+      }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '5rem', alignItems: 'start' }}
+          className="responsive-split"
+        >
+          <div>
+            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1.5rem' }}>The Hidden Epidemic</p>
+            <h3
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(1.8rem, 2.8vw, 2.5rem)',
+                fontWeight: 300,
+                color: 'var(--cream)',
+                lineHeight: 1.25,
+                margin: '0 0 2rem',
+              }}
+            >
+              Not all B12 is equal.{' '}
+              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>The form determines the outcome.</span>
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+              {[
+                { val: '47%', desc: 'Indian population vegetarian / vegan' },
+                { val: '70%', desc: 'Urban Indians with measurable B12 deficiency' },
+                { val: '+58.9%', desc: 'Methylcobalamin API volume growth 2025' },
+                { val: '5–7 yrs', desc: 'Avg. delay to neurological diagnosis' },
+              ].map((s) => (
+                <div key={s.val} style={{ borderTop: '1px solid rgba(138,171,138,0.3)', paddingTop: '1rem' }}>
+                  <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2rem', fontWeight: 300, color: 'var(--sage)', margin: '0 0 0.25rem', lineHeight: 1 }}>{s.val}</p>
+                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 300, color: 'rgba(248,246,241,0.45)', margin: 0, lineHeight: 1.5 }}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {B12_NARRATIVE.map((para, i) => (
+              <p
+                key={i}
+                style={{
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.9rem',
+                  fontWeight: 300,
+                  color: 'rgba(248,246,241,0.72)',
+                  lineHeight: 1.9,
+                  margin: 0,
+                  paddingTop: i > 0 ? '0.25rem' : 0,
+                  borderTop: i > 0 ? '0.5px solid rgba(138,171,138,0.12)' : 'none',
+                  paddingBottom: i > 0 ? '0' : '0',
+                }}
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       id="vitamin-b12"
       style={{
@@ -189,5 +263,6 @@ export default function VitaminB12Section() {
         </div>
       </div>
     </section>
+    </>
   )
 }

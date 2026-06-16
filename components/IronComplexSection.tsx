@@ -30,10 +30,108 @@ const ACCORDIONS = [
   },
 ]
 
+const IRON_STORY_STATS = [
+  { value: '1.2Bn', label: 'People affected by iron deficiency anaemia globally' },
+  { value: '57%', label: 'Indian women aged 15–49 with anaemia (NFHS-5)' },
+  { value: '40–60%', label: 'Oral iron discontinuation rate due to GI intolerance' },
+]
+
 export default function IronComplexSection() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
+    <>
+    {/* Narrative storyline */}
+    <section
+      style={{
+        background: 'var(--charcoal)',
+        padding: '5rem 6rem',
+        borderBottom: '0.5px solid rgba(138,171,138,0.12)',
+      }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'start' }}
+          className="responsive-split"
+        >
+          {/* Left — pull quote + stats */}
+          <div>
+            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1.5rem' }}>The Clinical Case</p>
+            <blockquote
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
+                fontWeight: 300,
+                fontStyle: 'italic',
+                color: 'var(--cream)',
+                lineHeight: 1.35,
+                margin: '0 0 2.5rem',
+                borderLeft: '3px solid var(--sage)',
+                paddingLeft: '1.5rem',
+              }}
+            >
+              "Simple ferrous salts were first-line for half a century — but 40–60% of patients stop before reaching therapeutic iron targets."
+            </blockquote>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {IRON_STORY_STATS.map((s) => (
+                <div key={s.value} style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-cormorant)',
+                      fontSize: '1.9rem',
+                      fontWeight: 300,
+                      color: 'var(--sage)',
+                      lineHeight: 1,
+                      flexShrink: 0,
+                      minWidth: '80px',
+                    }}
+                  >
+                    {s.value}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-dm-sans)',
+                      fontSize: '0.8rem',
+                      fontWeight: 300,
+                      color: 'rgba(248,246,241,0.5)',
+                      lineHeight: 1.6,
+                      paddingTop: '0.25rem',
+                    }}
+                  >
+                    {s.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — narrative paragraphs */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {[
+              `Iron deficiency anaemia affects 1.2 billion people worldwide — the most prevalent nutritional deficiency on the planet. In India, NFHS-5 data shows 57% of women aged 15–49 and 67% of children under five are anaemic. It remains the leading cause of preventable maternal mortality. The scale is not a distant public health statistic; it is the clinical reality facing every haematologist, obstetrician, and general physician in this country daily.`,
+              `The clinical management of IDA has changed radically over two decades. Simple ferrous salts — the default for half a century — carry GI intolerance that causes 40–60% of patients to discontinue before reaching therapeutic targets. Polysaccharide-iron complexes represent the next chapter: a protected matrix that delivers elemental iron past the stomach without the oxidative irritation of free ferrous ions. Superior tolerability translates directly to superior adherence — and adherence is the primary determinant of therapeutic outcome in chronic iron supplementation.`,
+              `The inflection point in IV iron came with high-stability complexes — Ferric Carboxymaltose and Iron Isomaltoside. These allow a clinician to replace the entire iron deficit (1,000–1,500 mg) in a single 15-minute infusion. For a post-bariatric patient, a Crohn's patient, or a chronic kidney disease patient on ESA therapy, this is not a convenience — it is the difference between therapeutic success and failure. The system cost economics are compelling: one TDI visit versus five multi-session iron sucrose visits at the same hospital.`,
+            ].map((para, i) => (
+              <p
+                key={i}
+                style={{
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.9rem',
+                  fontWeight: 300,
+                  color: 'rgba(248,246,241,0.72)',
+                  lineHeight: 1.9,
+                  margin: 0,
+                }}
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       id="iron-complex"
       style={{
@@ -211,5 +309,6 @@ export default function IronComplexSection() {
         </div>
       </div>
     </section>
+    </>
   )
 }
