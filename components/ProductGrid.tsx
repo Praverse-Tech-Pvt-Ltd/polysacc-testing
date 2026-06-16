@@ -38,7 +38,7 @@ const Shell = styled.div`
     outline: none;
   }
   .stage.dragging { cursor: grabbing; }
-  .ring { outline: none; }
+  .c-ring { outline: none; }
 
   /* soft left / right fade */
   .stage::before,
@@ -54,7 +54,7 @@ const Shell = styled.div`
   .stage::after  { right: 0; background: linear-gradient(to left,  var(--charcoal) 10%, transparent); }
 
   /* the spinning ring */
-  .ring {
+  .c-ring {
     --w: 155px;
     --h: 228px;
     --tz: 390px;           /* larger radius = more gap between cards */
@@ -64,7 +64,6 @@ const Shell = styled.div`
     top: 70px;
     left: calc(50% - var(--w) / 2);
     transform-style: preserve-3d;
-    will-change: transform;
   }
 
   /* individual card */
@@ -220,8 +219,9 @@ export default function ProductGrid() {
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current) }
   }, [])
 
-  /* pointer handlers */
+  /* pointer handlers — window listeners instead of setPointerCapture to avoid Chrome's blue capture border */
   const onDown = useCallback((e: React.PointerEvent) => {
+    if (e.button !== 0 && e.pointerType === 'mouse') return
     dragging.current = true
     startX.current   = e.clientX
     startRot.current = rotY.current
@@ -229,31 +229,33 @@ export default function ProductGrid() {
     frameVel.current = 0
     movedPx.current  = 0
     vel.current      = 0
-    stageRef.current?.setPointerCapture(e.pointerId)
     stageRef.current?.classList.add('dragging')
-  }, [])
 
-  const onMove = useCallback((e: React.PointerEvent) => {
-    if (!dragging.current) return
-    const dx = e.clientX - startX.current
-    movedPx.current  = Math.abs(dx)
-    frameVel.current = (e.clientX - lastX.current) * DRAG_SENS
-    lastX.current    = e.clientX
-    rotY.current     = startRot.current + dx * DRAG_SENS
-  }, [])
-
-  const onUp = useCallback((_e: React.PointerEvent) => {
-    dragging.current = false
-    stageRef.current?.classList.remove('dragging')
-    vel.current = frameVel.current
-
-    /* navigate to the frontmost card on tap/click */
-    if (movedPx.current < 10) {
-      // card i sits at rotY(STEP * i); front when STEP*i + rotY ≡ 0 (mod 360)
-      const raw = Math.round(-rotY.current / STEP)
-      const idx = ((raw % QUANTITY) + QUANTITY) % QUANTITY
-      router.push(`/products/${CATEGORIES[idx].id}`)
+    const handleMove = (ev: PointerEvent) => {
+      if (!dragging.current) return
+      const dx = ev.clientX - startX.current
+      movedPx.current  = Math.abs(dx)
+      frameVel.current = (ev.clientX - lastX.current) * DRAG_SENS
+      lastX.current    = ev.clientX
+      rotY.current     = startRot.current + dx * DRAG_SENS
     }
+
+    const handleUp = () => {
+      dragging.current = false
+      stageRef.current?.classList.remove('dragging')
+      vel.current = frameVel.current
+      window.removeEventListener('pointermove', handleMove)
+      window.removeEventListener('pointerup', handleUp)
+
+      if (movedPx.current < 10) {
+        const raw = Math.round(-rotY.current / STEP)
+        const idx = ((raw % QUANTITY) + QUANTITY) % QUANTITY
+        router.push(`/products/${CATEGORIES[idx].id}`)
+      }
+    }
+
+    window.addEventListener('pointermove', handleMove)
+    window.addEventListener('pointerup', handleUp)
   }, [router])
 
   return (
@@ -307,25 +309,18 @@ export default function ProductGrid() {
           <div
             ref={stageRef}
             className="stage"
-            tabIndex={-1}
-            style={{ outline: 'none' }}
             onPointerDown={onDown}
-            onPointerMove={onMove}
-            onPointerUp={onUp}
-            onPointerCancel={onUp}
           >
             <div
               ref={ringRef}
-              className="ring"
-              tabIndex={-1}
-              style={{ '--quantity': QUANTITY, outline: 'none' } as React.CSSProperties}
+              className="c-ring"
+              style={{ '--quantity': QUANTITY } as React.CSSProperties}
             >
               {CATEGORIES.map((cat, i) => (
                 <div
                   key={cat.id}
                   className="card"
-                  tabIndex={-1}
-                  style={{ '--idx': i, '--color-card': cat.color, outline: 'none' } as React.CSSProperties}
+                  style={{ '--idx': i, '--color-card': cat.color } as React.CSSProperties}
                 >
                   <div className="face">
                     <span className="c-num">{cat.num}</span>
