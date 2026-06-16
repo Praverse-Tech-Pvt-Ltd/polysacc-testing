@@ -92,7 +92,7 @@ export default function NicheStorylineSection() {
               }}
             >
               Polysacc was built to occupy that space deliberately. We call it
-              <em style={{ color: 'var(--sage-light)', fontStyle: 'normal', fontWeight: 400 }}> polysaccharide niche therapeutics</em> —
+              <em style={{ color: 'var(--sage-light)', fontStyle: 'normal', fontWeight: 400 }}> Niche therapeutics</em> —
               not because we only work with polysaccharides, but because the mindset that drives our
               PPS work drives everything we do: find the molecule with real clinical value, understand
               it better than anyone, and build the supply and narrative around it.

@@ -45,7 +45,7 @@ export default function ScienceSection() {
             The Science
           </p>
           <BlurText
-            text="The Science of Polysaccharide Niche Therapeutics"
+            text="The Science of Niche Therapeutics"
             tag="h2"
             style={{
               fontFamily: 'var(--font-cormorant)',

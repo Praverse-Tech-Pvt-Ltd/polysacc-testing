@@ -11,9 +11,8 @@ const CATEGORIES = [
   { id: 'anabolic-steroids', label: 'Anabolic Steroids' },
   { id: 'mens-health', label: "Men's Health" },
   { id: 'womens-health', label: "Women's Health" },
-  { id: 'devices', label: 'Devices' },
+  { id: 'devices', label: 'Uro-Gyno Devices' },
   { id: 'db-dsp', label: 'DB / DSP' },
-  { id: 'team', label: 'Team' },
 ]
 
 export default function ProductCategoryNav() {

@@ -145,7 +145,7 @@ export default function Hero() {
             Advancing the science of
           </span>
           <span style={{ color: 'var(--sage)', display: 'block' }}>
-            polysaccharide niche therapeutics
+            Niche therapeutics
           </span>
         </motion.h1>
 

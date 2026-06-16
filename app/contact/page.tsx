@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 import MolecularPattern from '@/components/MolecularPattern'
 import { COMPANY } from '@/lib/data'
+import TeamSection from '@/components/TeamSection'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -57,8 +58,11 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <TeamSection />
+
       {/* Contact section */}
       <section
+        id="enquiry"
         style={{
           background: 'var(--charcoal)',
           padding: '8rem 6rem',

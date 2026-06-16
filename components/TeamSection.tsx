@@ -45,7 +45,7 @@ export default function TeamSection() {
     <section
       id="team"
       style={{
-        background: 'var(--charcoal)',
+        background: 'var(--hero-grey)',
         padding: '7rem 6rem',
       }}
       className="section-pad"
@@ -72,7 +72,7 @@ export default function TeamSection() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2.25rem, 4vw, 3.5rem)',
                 fontWeight: 300,
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.12,
               }}
             >
@@ -88,7 +88,7 @@ export default function TeamSection() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.95rem',
                 fontWeight: 300,
-                color: 'rgba(248,246,241,0.6)',
+                color: 'var(--muted)',
                 lineHeight: 1.85,
               }}
             >
@@ -118,8 +118,8 @@ export default function TeamSection() {
                   ? '0.5px solid rgba(138,171,138,0.5)'
                   : '0.5px solid rgba(138,171,138,0.2)',
                 background: member.highlight
-                  ? 'rgba(138,171,138,0.08)'
-                  : 'rgba(255,255,255,0.02)',
+                  ? 'rgba(138,171,138,0.1)'
+                  : 'rgba(255,255,255,0.6)',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -156,7 +156,7 @@ export default function TeamSection() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.4rem',
                     fontWeight: 300,
-                    color: 'var(--cream)',
+                    color: 'var(--charcoal)',
                     margin: '0 0 0.2rem',
                     lineHeight: 1.2,
                   }}
@@ -186,7 +186,7 @@ export default function TeamSection() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.82rem',
                     fontWeight: 300,
-                    color: 'rgba(248,246,241,0.55)',
+                    color: 'var(--muted)',
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -260,7 +260,7 @@ export default function TeamSection() {
                 fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
                 fontWeight: 300,
                 fontStyle: 'italic',
-                color: 'rgba(248,246,241,0.5)',
+                color: 'var(--muted)',
                 margin: '0 0 0.5rem',
               }}
             >
@@ -284,7 +284,7 @@ export default function TeamSection() {
             </a>
           </div>
           <a
-            href="mailto:info@polysacc.com"
+            href="#enquiry"
             className="btn-ghost-sage"
             style={{ whiteSpace: 'nowrap' }}
           >

@@ -5,11 +5,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const NAV_LINKS = [
-  { label: 'About', href: '/about' },
-  { label: 'Science', href: '/science' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Products', href: '/products' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About',     href: '/about',      highlight: false, small: false },
+  { label: 'Science',   href: '/science',    highlight: false, small: false },
+  { label: 'Portfolio', href: '/portfolio',  highlight: false, small: false },
+  { label: 'Contact',   href: '/contact',    highlight: false, small: false },
 ]
 
 export default function Nav() {
@@ -74,25 +73,50 @@ export default function Nav() {
           className="hidden lg:flex"
           style={{ alignItems: 'center', gap: '2.5rem' }}
         >
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              style={{
-                fontFamily: 'var(--font-dm-sans)',
-                fontSize: '0.85rem',
-                fontWeight: 400,
-                color: 'var(--muted)',
-                textDecoration: 'none',
-                transition: 'color 0.3s',
-                letterSpacing: '0.03em',
-              }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--charcoal)')}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'var(--muted)')}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.highlight ? (
+              <Link
+                key={link.label}
+                href={link.href}
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                style={{
+                  fontFamily: 'var(--font-cormorant)',
+                  fontSize: link.small ? '0.88rem' : '1.05rem',
+                  fontWeight: 500,
+                  fontStyle: 'italic',
+                  color: 'var(--sage-deep)',
+                  textDecoration: 'none',
+                  letterSpacing: '0.02em',
+                  borderBottom: '0.5px solid var(--sage)',
+                  paddingBottom: '1px',
+                  transition: 'opacity 0.2s',
+                  whiteSpace: 'nowrap',
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.opacity = '0.65')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.opacity = '1')}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                style={{
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.85rem',
+                  fontWeight: 400,
+                  color: 'var(--muted)',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s',
+                  letterSpacing: '0.03em',
+                }}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--charcoal)')}
+                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'var(--muted)')}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Desktop CTA buttons */}
@@ -184,7 +208,7 @@ export default function Nav() {
           </button>
           {NAV_LINKS.map((link) => (
             <Link
-              key={link.href}
+              key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
               className="mobile-nav-link"
