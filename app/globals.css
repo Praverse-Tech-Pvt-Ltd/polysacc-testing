@@ -69,7 +69,45 @@
   }
 }
 
+/* Products page nav inner padding */
+.cat-nav-inner {
+  padding: 0 6rem;
+}
+
+/* Men's health 3-col row */
+.mens-health-row {
+  grid-template-columns: 120px 1fr 1fr !important;
+}
+
+/* Responsive four-column */
+.responsive-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Products hero inner padding */
+.inner-pad {
+  padding: 0 6rem;
+}
+
 @media (max-width: 768px) {
+  .cat-nav-inner {
+    padding: 0 1.25rem !important;
+  }
+
+  .inner-pad {
+    padding: 0 1.25rem !important;
+  }
+
+  .mens-health-row {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .responsive-four {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
   .section-pad {
     padding: 4.5rem 1.25rem !important;
   }
@@ -145,6 +183,10 @@
 }
 
 @media (max-width: 480px) {
+  .responsive-four {
+    grid-template-columns: 1fr !important;
+  }
+
   .responsive-stats {
     grid-template-columns: 1fr !important;
   }

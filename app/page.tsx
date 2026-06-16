@@ -1,5 +1,4 @@
 import Hero from '@/components/Hero'
-import StatsStrip from '@/components/StatsStrip'
 import CompanyStatement from '@/components/CompanyStatement'
 import ScienceSection from '@/components/ScienceSection'
 import PortfolioGrid from '@/components/PortfolioGrid'
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsStrip />
       <CompanyStatement />
       <ScienceSection />
       <PortfolioGrid />
