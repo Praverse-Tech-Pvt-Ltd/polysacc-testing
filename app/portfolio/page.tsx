@@ -3,6 +3,7 @@ import MolecularPattern from '@/components/MolecularPattern'
 import Link from 'next/link'
 import NicheStorylineSection from '@/components/NicheStorylineSection'
 import ProductGrid from '@/components/ProductGrid'
+import PhilosophyScrollGuide from '@/components/PhilosophyScrollGuide'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -57,6 +58,8 @@ export default function PortfolioPage() {
           </p>
         </div>
       </section>
+
+      <PhilosophyScrollGuide />
 
       {/* Elmiron card */}
       <section style={{ background: 'var(--sage-pale)', padding: '8rem 6rem' }} className="section-pad">
