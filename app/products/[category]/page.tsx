@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import PolysaccharidePentosanSection from '@/components/PolysaccharidePentosanSection'
 import IronComplexSection from '@/components/IronComplexSection'
 import VitaminB12Section from '@/components/VitaminB12Section'
 import MCBSection from '@/components/MCBSection'
@@ -9,22 +10,25 @@ import MensHealthSection from '@/components/MensHealthSection'
 import WomensHealthSection from '@/components/WomensHealthSection'
 import DevicesSection from '@/components/DevicesSection'
 import DBDSPSection from '@/components/DBDSPSection'
+import SleepSection from '@/components/SleepSection'
 
 const CATEGORY_MAP: Record<string, { label: string; component: React.ComponentType }> = {
-  'iron-complex':      { label: 'Iron Complex',       component: IronComplexSection },
-  'vitamin-b12':       { label: 'Vitamin B12',         component: VitaminB12Section },
-  'mcb':               { label: 'MCB',                 component: MCBSection },
-  'steroids':          { label: 'Steroids',            component: SteroidsSection },
-  'anabolic-steroids': { label: 'Anabolic Steroids',   component: AnabolicSteroidsSection },
-  'mens-health':       { label: "Men's Health",        component: MensHealthSection },
-  'womens-health':     { label: "Women's Health",      component: WomensHealthSection },
-  'devices':           { label: 'Uro-Gyno Devices',    component: DevicesSection },
-  'db-dsp':            { label: 'DB / DSP',            component: DBDSPSection },
+  'polysaccharide-pentosan': { label: 'Polysaccharide & Pentosan', component: PolysaccharidePentosanSection },
+  'iron-complex':            { label: 'Iron Complex',              component: IronComplexSection },
+  'vitamin-b12':             { label: 'Vitamin B12',               component: VitaminB12Section },
+  'mcb':                     { label: 'MCB · Neuropathy',          component: MCBSection },
+  'steroids':                { label: 'Steroids',                  component: SteroidsSection },
+  'anabolic-steroids':       { label: 'Anabolic Steroids',         component: AnabolicSteroidsSection },
+  'mens-health':             { label: 'Urology · Bladder',         component: MensHealthSection },
+  'womens-health':           { label: "Women's Health",            component: WomensHealthSection },
+  'devices':                 { label: 'Uro-Gyn Devices',           component: DevicesSection },
+  'db-dsp':                  { label: 'DB / DSP',                  component: DBDSPSection },
+  'sleep':                   { label: 'Sleep Solutions',           component: SleepSection },
 }
 
 const CATEGORY_ORDER = [
-  'iron-complex', 'vitamin-b12', 'mcb', 'steroids', 'anabolic-steroids',
-  'mens-health', 'womens-health', 'devices', 'db-dsp',
+  'polysaccharide-pentosan', 'iron-complex', 'vitamin-b12', 'mcb', 'steroids',
+  'anabolic-steroids', 'mens-health', 'womens-health', 'devices', 'db-dsp', 'sleep',
 ]
 
 export function generateStaticParams() {

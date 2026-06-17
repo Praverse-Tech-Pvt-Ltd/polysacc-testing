@@ -1,3 +1,13 @@
+const UROLOGY_BASKET_PRODUCTS = [
+  'Pentosan Polysulfate Sodium',
+  'Mirabegron',
+  'Tamsulosin',
+  'Silodosin',
+  'Dutasteride',
+  'Vibegron',
+  'Finasteride',
+]
+
 const JOURNEY_STAGES = [
   {
     age: '40s',
@@ -27,6 +37,48 @@ const JOURNEY_STAGES = [
 
 export default function MensHealthSection() {
   return (
+    <>
+    {/* Basket overview */}
+    <section
+      style={{ background: 'var(--sage-pale)', padding: '7rem 6rem 5rem', borderBottom: '0.5px solid rgba(138,171,138,0.2)' }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
+          <div>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 07 — Men's Health</p>
+            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
+              Urology Bladder<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Disease Basket</span>
+            </h2>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>
+              Urology basket for bladder pain, overactive bladder, benign prostatic hyperplasia, urinary urgency and lower urinary tract symptoms.
+            </p>
+          </div>
+          <div>
+            <p className="section-tag" style={{ marginBottom: '1rem' }}>Portfolio Products</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              {UROLOGY_BASKET_PRODUCTS.map((p) => (
+                <span
+                  key={p}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 400,
+                    color: 'var(--sage-deep)',
+                    background: 'rgba(138,171,138,0.12)',
+                    border: '0.5px solid rgba(138,171,138,0.35)',
+                    padding: '0.35rem 0.85rem',
+                  }}
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section
       id="mens-health"
       style={{
@@ -229,5 +281,6 @@ export default function MensHealthSection() {
 
       </div>
     </section>
+    </>
   )
 }

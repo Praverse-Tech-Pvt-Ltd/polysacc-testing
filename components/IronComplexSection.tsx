@@ -2,6 +2,20 @@
 
 import { useState } from 'react'
 
+const IRON_BASKET_PRODUCTS = [
+  'Ferrous Sulfate',
+  'Iron Polysaccharide',
+  'Iron III Hydroxide Polymaltose',
+  'Iron Protein Succinylate',
+  'Ferric Ammonium Citrate',
+  'Ferric Chloride',
+  'Ferrous Bisglycinate',
+  'Iron Sucrose',
+  'Iron Dextran',
+]
+
+const IRON_BASKET_PITCH = 'Iron products for anemia, iron deficiency, women\'s health, pregnancy nutrition, pediatric nutrition and hospital injectable iron segment.'
+
 const IRON_PRODUCTS = [
   { name: 'Iron III Polymaltose', category: 'Oral Complex', route: 'Oral', note: 'Fewer GI side effects vs. ferrous salts' },
   { name: 'Iron Polysaccharide', category: 'Oral Complex', route: 'Oral', note: 'Protected matrix; superior tolerability' },
@@ -41,6 +55,47 @@ export default function IronComplexSection() {
 
   return (
     <>
+    {/* Basket overview */}
+    <section
+      style={{ background: 'var(--sage-pale)', padding: '7rem 6rem 5rem', borderBottom: '0.5px solid rgba(138,171,138,0.2)' }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
+          <div>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 02 — Iron Complex</p>
+            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
+              Iron Complex<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Finished Dosage Basket</span>
+            </h2>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>
+              {IRON_BASKET_PITCH}
+            </p>
+          </div>
+          <div>
+            <p className="section-tag" style={{ marginBottom: '1rem' }}>Portfolio Products</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              {IRON_BASKET_PRODUCTS.map((p) => (
+                <span
+                  key={p}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 400,
+                    color: 'var(--sage-deep)',
+                    background: 'rgba(138,171,138,0.12)',
+                    border: '0.5px solid rgba(138,171,138,0.35)',
+                    padding: '0.35rem 0.85rem',
+                  }}
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     {/* Narrative storyline */}
     <section
       style={{

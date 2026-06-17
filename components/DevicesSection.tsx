@@ -66,6 +66,7 @@ const GYNO_DEVICES = [
 
 export default function DevicesSection() {
   return (
+    <>
     <section
       id="devices"
       style={{
@@ -287,5 +288,72 @@ export default function DevicesSection() {
 
       </div>
     </section>
+
+    {/* Uro-Gyn Biochip concept */}
+    <section
+      style={{ background: 'var(--sage-pale)', padding: '5rem 6rem', borderTop: '0.5px solid rgba(138,171,138,0.2)' }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '5rem', alignItems: 'start' }} className="responsive-split">
+          <div>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Concept</p>
+            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
+              Uro-Gyn Bladder<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Biochip Concept</span>
+            </h2>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, marginBottom: '2rem' }}>
+              Diagnostic and monitoring concept for bladder health in urology and gynecology — a future-facing initiative linking device diagnostics with targeted pharmacological intervention.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <p className="section-tag" style={{ marginBottom: '0.5rem' }}>Linked API Basket</p>
+              {['Pentosan Polysulfate Sodium', 'Mirabegron', 'Vibegron'].map((m) => (
+                <span
+                  key={m}
+                  style={{
+                    display: 'inline-block',
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 400,
+                    color: 'var(--sage-deep)',
+                    background: 'rgba(138,171,138,0.12)',
+                    border: '0.5px solid rgba(138,171,138,0.35)',
+                    padding: '0.35rem 0.85rem',
+                    marginRight: '0.5rem',
+                    marginBottom: '0.35rem',
+                  }}
+                >
+                  {m}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.85, margin: 0 }}>
+              The bladder biochip concept represents a convergence of diagnostics and drug delivery within the uro-gynaecological space. Current clinical practice requires symptomatic assessment and empirical trial-and-error across bladder pain, overactive bladder, and benign prostatic hyperplasia. A biochip-based monitoring system would enable real-time biomarker tracking of urothelial integrity and bladder function, informing more precise pharmacological decisions.
+            </p>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.85, margin: 0, borderTop: '0.5px solid rgba(138,171,138,0.2)', paddingTop: '1.5rem' }}>
+              The concept links directly with Polysacc's pharmaceutical basket: Pentosan Polysulfate Sodium for GAG-layer monitoring and IC/BPS treatment, Mirabegron and Vibegron for beta-3 agonist titration in overactive bladder. Device-guided pharmacotherapy represents the next frontier for precision urology — and a defensible platform for partners building across both device and pharma categories.
+            </p>
+            <div
+              style={{
+                background: 'rgba(138,171,138,0.08)',
+                border: '0.5px solid rgba(138,171,138,0.3)',
+                borderLeft: '3px solid var(--sage)',
+                padding: '1.25rem 1.5rem',
+              }}
+            >
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage-deep)', margin: '0 0 0.5rem' }}>
+                Current Status
+              </p>
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.82rem', fontWeight: 300, color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>
+                No direct API product. Concept linked with the bladder health basket using Pentosan Polysulfate Sodium, Mirabegron and Vibegron. Subject to partnership development and technology confirmation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
   )
 }

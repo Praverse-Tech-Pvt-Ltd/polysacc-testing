@@ -4,22 +4,23 @@ import React, { useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import styled from 'styled-components'
 
-const QUANTITY   = 9
-const AUTO_SPEED = 0.045
+const QUANTITY   = 10
+const AUTO_SPEED = 0.038
 const DRAG_SENS  = 0.40
 const FRICTION   = 0.91
-const STEP       = 360 / QUANTITY   // 40° per card slot
+const STEP       = 360 / QUANTITY   // 36° per card slot
 
 const CATEGORIES = [
-  { id: 'iron-complex',      num: '01', label: 'Iron Complex',      tag: 'Haematology',       color: '138, 171, 138' },
-  { id: 'vitamin-b12',       num: '02', label: 'Vitamin B12',       tag: 'Metabolic',         color: '160, 195, 160' },
-  { id: 'mcb',               num: '03', label: 'MCB',               tag: 'Neurology',         color: '74, 122, 74'   },
-  { id: 'steroids',          num: '04', label: 'Steroids',          tag: 'Corticosteroids',   color: '110, 155, 110' },
-  { id: 'anabolic-steroids', num: '05', label: 'Anabolic Steroids', tag: 'Endocrinology',     color: '90, 140, 90'   },
-  { id: 'mens-health',       num: '06', label: "Men's Health",      tag: 'Urology',           color: '176, 125, 58'  },
-  { id: 'womens-health',     num: '07', label: "Women's Health",    tag: 'Gynaecology',       color: '184, 205, 160' },
-  { id: 'devices',           num: '08', label: 'Uro-Gyno Devices',  tag: 'Medical Devices',   color: '130, 165, 140' },
-  { id: 'db-dsp',            num: '09', label: 'DB / DSP',          tag: 'Anti-inflammatory', color: '100, 148, 100' },
+  { id: 'polysaccharide-pentosan', num: '01', label: 'Polysaccharide & Pentosan', tag: 'Bladder Health',        color: '100, 160, 155' },
+  { id: 'iron-complex',            num: '02', label: 'Iron Complex',              tag: 'Haematology',           color: '138, 171, 138' },
+  { id: 'vitamin-b12',             num: '03', label: 'Vitamin B12',               tag: 'Metabolic',             color: '160, 195, 160' },
+  { id: 'mcb',                     num: '04', label: 'MCB · Neuropathy',          tag: 'Neurology',             color: '74, 122, 74'   },
+  { id: 'steroids',                num: '05', label: 'Steroids',                  tag: 'Corticosteroids',       color: '110, 155, 110' },
+  { id: 'anabolic-steroids',       num: '06', label: 'Anabolic Steroids',         tag: 'Endocrinology',         color: '90, 140, 90'   },
+  { id: 'mens-health',             num: '07', label: 'Urology · Bladder',         tag: 'Bladder Disease',       color: '176, 125, 58'  },
+  { id: 'womens-health',           num: '08', label: "Women's Health",            tag: 'Gynaecology · OCP',     color: '184, 205, 160' },
+  { id: 'devices',                 num: '09', label: 'Uro-Gyn Devices',           tag: 'Medical Devices',       color: '130, 165, 140' },
+  { id: 'sleep',                   num: '10', label: 'Sleep Solutions',           tag: 'Neuroscience',          color: '115, 100, 158' },
 ]
 
 /* ─── styled shell ─────────────────────────────────────────── */
@@ -57,7 +58,7 @@ const Shell = styled.div`
   .c-ring {
     --w: 155px;
     --h: 228px;
-    --tz: 390px;           /* larger radius = more gap between cards */
+    --tz: 430px;           /* larger radius = more gap between cards */
     position: absolute;
     width: var(--w);
     height: var(--h);
@@ -288,7 +289,7 @@ export default function ProductGrid() {
               color: 'var(--cream)',
               lineHeight: 1.15,
             }}>
-              Nine areas.{' '}
+              Ten areas.{' '}
               <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>One discipline.</span>
             </h2>
           </div>

@@ -36,6 +36,47 @@ const MCB_NARRATIVE = [
 export default function MCBSection() {
   return (
     <>
+    {/* Basket overview */}
+    <section
+      style={{ background: 'var(--charcoal)', padding: '7rem 6rem 5rem', borderBottom: '0.5px solid rgba(138,171,138,0.15)' }}
+      className="section-pad"
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
+          <div>
+            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}>Basket 04 — Methylcobalamin</p>
+            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--cream)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
+              MCB<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>Neuropathy Basket</span>
+            </h2>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'rgba(248,246,241,0.6)', lineHeight: 1.75, margin: 0 }}>
+              For neuropathy, vitamin B12 deficiency, nerve health and hematinic segment.
+            </p>
+          </div>
+          <div>
+            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>Portfolio Product</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              {['Methylcobalamin'].map((p) => (
+                <span
+                  key={p}
+                  style={{
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.78rem',
+                    fontWeight: 400,
+                    color: 'var(--sage)',
+                    background: 'rgba(138,171,138,0.1)',
+                    border: '0.5px solid rgba(138,171,138,0.3)',
+                    padding: '0.35rem 0.85rem',
+                  }}
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     {/* Narrative section */}
     <section
       style={{
