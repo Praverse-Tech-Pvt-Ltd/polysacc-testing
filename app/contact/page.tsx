@@ -145,11 +145,27 @@ export default function ContactPage() {
                   className="section-tag"
                   style={{ color: 'var(--amber)', marginBottom: '0.35rem' }}
                 >
-                  Contact Person
+                  Contact
                 </p>
                 <a
                   href={`mailto:${COMPANY.email}`}
                   style={{
+                    display: 'block',
+                    fontFamily: 'var(--font-dm-sans)',
+                    fontSize: '0.9rem',
+                    fontWeight: 300,
+                    color: 'var(--amber)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s',
+                    marginBottom: '0.3rem',
+                  }}
+                >
+                  {COMPANY.email}
+                </a>
+                <a
+                  href={`mailto:${COMPANY.email2}`}
+                  style={{
+                    display: 'block',
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.9rem',
                     fontWeight: 300,
@@ -158,7 +174,7 @@ export default function ContactPage() {
                     transition: 'color 0.2s',
                   }}
                 >
-                  {COMPANY.contactPerson}, {COMPANY.contactRole} · {COMPANY.email}
+                  {COMPANY.email2}
                 </a>
               </div>
               <div>

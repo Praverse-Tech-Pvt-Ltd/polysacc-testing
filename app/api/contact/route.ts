@@ -19,8 +19,8 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: 'website@polysaccharidechemistry.com',
-      to: process.env.CONTACT_EMAIL ?? 'kanchan.londhe@swatispentose.com',
-      cc: process.env.CONTACT_CC_EMAIL ?? 'v@v-group.in',
+      to: process.env.CONTACT_EMAIL ?? 'info@polysacc.com',
+      cc: process.env.CONTACT_CC_EMAIL ?? 'vishal@polysacc.com',
       subject: `New Enquiry — ${data.type || 'General'} — ${data.name}${data.company ? ` (${data.company})` : ''}`,
       html: `
         <table style="font-family: sans-serif; font-size: 14px; border-collapse: collapse; width: 100%; max-width: 600px;">
