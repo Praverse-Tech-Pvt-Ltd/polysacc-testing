@@ -11,6 +11,7 @@ const BASKETS = [
     label: 'Polysaccharide Speciality',
     tag: 'Bladder Health · IC/BPS',
     detail: 'PPS — the GAG-layer repair molecule',
+    indications: ['IC/BPS', 'Osteoarthritis (OA)', 'Hyperlipidaemia (HL)', 'Diabetic Nephropathy (DN)'],
     accent: '100, 160, 155',
   },
   {
@@ -234,13 +235,37 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
             fontSize: '0.72rem',
             fontWeight: 300,
             color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--muted)',
-            margin: '0 0 1.1rem',
+            margin: basket.indications ? '0 0 0.6rem' : '0 0 1.1rem',
             letterSpacing: '0.02em',
             transition: 'color 0.25s',
           }}
         >
           {basket.detail}
         </p>
+        {basket.indications && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.28rem', margin: '0 0 1rem' }}>
+            {basket.indications.map((ind) => (
+              <div key={ind} style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                <span style={{
+                  width: 4, height: 4, borderRadius: '50%',
+                  background: `rgba(${basket.accent}, ${hovered ? '0.8' : '0.4'})`,
+                  flexShrink: 0,
+                  transition: 'background 0.25s',
+                }} />
+                <span style={{
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.68rem',
+                  fontWeight: 400,
+                  color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--muted)',
+                  transition: 'color 0.25s',
+                  letterSpacing: '0.01em',
+                }}>
+                  {ind}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
         <div
           style={{
             display: 'flex',
