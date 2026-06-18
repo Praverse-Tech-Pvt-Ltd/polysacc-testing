@@ -125,15 +125,17 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
         position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer',
-        background: hovered ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.6)',
+        background: hovered
+          ? `linear-gradient(145deg, rgba(255,255,255,0.92) 0%, rgba(${basket.accent},0.07) 100%)`
+          : `linear-gradient(145deg, rgba(255,255,255,0.72) 0%, rgba(${basket.accent},0.04) 100%)`,
         backdropFilter: 'blur(24px) saturate(1.5)',
         WebkitBackdropFilter: 'blur(24px) saturate(1.5)',
         border: hovered
           ? `1px solid rgba(${basket.accent}, 0.45)`
-          : '1px solid rgba(255,255,255,0.75)',
+          : `1px solid rgba(${basket.accent}, 0.15)`,
         boxShadow: hovered
-          ? `0 16px 48px rgba(44,44,42,0.12), inset 0 1px 0 rgba(255,255,255,0.95)`
-          : '0 4px 24px rgba(44,44,42,0.07), inset 0 1px 0 rgba(255,255,255,0.85)',
+          ? `0 20px 56px rgba(44,44,42,0.16), 0 4px 12px rgba(${basket.accent},0.12), inset 0 1px 0 rgba(255,255,255,0.95)`
+          : `0 6px 28px rgba(44,44,42,0.09), 0 1px 4px rgba(${basket.accent},0.08), inset 0 1px 0 rgba(255,255,255,0.85)`,
         padding: '2.5rem 2.25rem 2.25rem',
         minHeight: '240px',
         display: 'flex',
