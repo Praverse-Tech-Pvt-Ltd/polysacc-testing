@@ -1,3 +1,8 @@
+'use client'
+
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+
 const PILLARS = [
   {
     number: '01',
@@ -21,14 +26,26 @@ const PILLARS = [
   },
 ]
 
+const pillarContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+}
+const pillarItem = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+}
+
 export default function NicheStorylineSection() {
+  const pillarsRef = useRef<HTMLDivElement>(null)
+  const pillarsInView = useInView(pillarsRef, { once: true, margin: '-60px' })
+
   return (
     <section
       id="niche"
       style={{
-        background: 'var(--charcoal)',
+        background: 'var(--hero-grey)',
         padding: '7rem 6rem',
-        borderBottom: '0.5px solid rgba(138,171,138,0.15)',
+        borderBottom: '0.5px solid rgba(138,171,138,0.22)',
       }}
       className="section-pad"
     >
@@ -46,7 +63,7 @@ export default function NicheStorylineSection() {
           className="responsive-split"
         >
           <div>
-            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>
+            <p className="section-tag" style={{ marginBottom: '1rem' }}>
               The Polysacc Philosophy
             </p>
             <h2
@@ -54,12 +71,12 @@ export default function NicheStorylineSection() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2.25rem, 4vw, 3.5rem)',
                 fontWeight: 300,
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.12,
               }}
             >
               Why{' '}
-              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>niche</span>
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>niche</span>
               {' '}is not a limitation —{' '}
               <br />
               it is the strategy.
@@ -72,7 +89,7 @@ export default function NicheStorylineSection() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '1.05rem',
                 fontWeight: 300,
-                color: 'rgba(248,246,241,0.7)',
+                color: 'var(--muted)',
                 lineHeight: 1.85,
                 marginBottom: '1.5rem',
               }}
@@ -87,12 +104,12 @@ export default function NicheStorylineSection() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '1.05rem',
                 fontWeight: 300,
-                color: 'rgba(248,246,241,0.7)',
+                color: 'var(--muted)',
                 lineHeight: 1.85,
               }}
             >
               Polysacc was built to occupy that space deliberately. We call it
-              <em style={{ color: 'var(--sage-light)', fontStyle: 'normal', fontWeight: 400 }}> Niche therapeutics</em> —
+              <em style={{ color: 'var(--sage-deep)', fontStyle: 'normal', fontWeight: 400 }}> Niche therapeutics</em> —
               not because we only work with polysaccharides, but because the mindset that drives our
               PPS work drives everything we do: find the molecule with real clinical value, understand
               it better than anyone, and build the supply and narrative around it.
@@ -101,7 +118,11 @@ export default function NicheStorylineSection() {
         </div>
 
         {/* Four pillars */}
-        <div
+        <motion.div
+          ref={pillarsRef}
+          variants={pillarContainer}
+          initial="hidden"
+          animate={pillarsInView ? 'visible' : 'hidden'}
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
@@ -111,8 +132,9 @@ export default function NicheStorylineSection() {
           className="responsive-four"
         >
           {PILLARS.map((p, i) => (
-            <div
+            <motion.div
               key={p.number}
+              variants={pillarItem}
               style={{
                 padding: '2.5rem 2rem',
                 borderLeft: i === 0 ? 'none' : '0.5px solid rgba(138,171,138,0.2)',
@@ -135,7 +157,7 @@ export default function NicheStorylineSection() {
                   fontSize: '1.25rem',
                   fontWeight: 300,
                   fontStyle: 'italic',
-                  color: 'var(--cream)',
+                  color: 'var(--charcoal)',
                   lineHeight: 1.3,
                   margin: '0 0 1rem',
                 }}
@@ -147,16 +169,16 @@ export default function NicheStorylineSection() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.8rem',
                   fontWeight: 300,
-                  color: 'rgba(248,246,241,0.55)',
+                  color: 'var(--muted)',
                   lineHeight: 1.8,
                   margin: 0,
                 }}
               >
                 {p.body}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Closing line */}
         <div
@@ -177,7 +199,7 @@ export default function NicheStorylineSection() {
               fontSize: 'clamp(1.2rem, 2.5vw, 1.65rem)',
               fontWeight: 300,
               fontStyle: 'italic',
-              color: 'rgba(248,246,241,0.45)',
+              color: 'var(--muted)',
               margin: 0,
               maxWidth: '700px',
             }}
@@ -186,7 +208,7 @@ export default function NicheStorylineSection() {
           </p>
           <div style={{ textAlign: 'right', flexShrink: 0 }}>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', color: 'var(--sage)', letterSpacing: '0.06em', margin: '0 0 0.2rem', textTransform: 'uppercase' }}>Est.</p>
-            <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2rem', fontWeight: 300, color: 'var(--cream)', margin: 0, lineHeight: 1 }}>Mumbai</p>
+            <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2rem', fontWeight: 300, color: 'var(--charcoal)', margin: 0, lineHeight: 1 }}>Mumbai</p>
           </div>
         </div>
 

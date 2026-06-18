@@ -1,3 +1,8 @@
+'use client'
+
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+
 const UROLOGY_BASKET_PRODUCTS = [
   'Pentosan Polysulfate Sodium',
   'Mirabegron',
@@ -35,7 +40,19 @@ const JOURNEY_STAGES = [
   },
 ]
 
+const journeyContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15, delayChildren: 0.05 } },
+}
+const journeyRow = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+}
+
 export default function MensHealthSection() {
+  const journeyRef = useRef<HTMLDivElement>(null)
+  const journeyInView = useInView(journeyRef, { once: true, margin: '-80px' })
+
   return (
     <>
     {/* Basket overview */}
@@ -46,10 +63,10 @@ export default function MensHealthSection() {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
           <div>
-            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 07 — Men's Health</p>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 06 — Men's Health Urology</p>
             <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
-              Urology Bladder<br />
-              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Disease Basket</span>
+              Men's Health<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Urology Basket</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>
               Urology basket for bladder pain, overactive bladder, benign prostatic hyperplasia, urinary urgency and lower urinary tract symptoms.
@@ -82,9 +99,9 @@ export default function MensHealthSection() {
     <section
       id="mens-health"
       style={{
-        background: 'var(--charcoal)',
+        background: 'var(--cream)',
         padding: '7rem 6rem',
-        borderBottom: '0.5px solid rgba(138,171,138,0.15)',
+        borderBottom: '0.5px solid rgba(138,171,138,0.22)',
       }}
       className="section-pad"
     >
@@ -110,12 +127,12 @@ export default function MensHealthSection() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2.25rem, 4vw, 3.5rem)',
                 fontWeight: 300,
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.12,
               }}
             >
               The conditions men{' '}
-              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>
                 live with, but rarely speak about.
               </span>
             </h2>
@@ -126,7 +143,7 @@ export default function MensHealthSection() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.95rem',
                 fontWeight: 300,
-                color: 'rgba(248,246,241,0.65)',
+                color: 'var(--muted)',
                 lineHeight: 1.85,
               }}
             >
@@ -142,10 +159,17 @@ export default function MensHealthSection() {
         </div>
 
         {/* Journey stages */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+        <motion.div
+          ref={journeyRef}
+          variants={journeyContainer}
+          initial="hidden"
+          animate={journeyInView ? 'visible' : 'hidden'}
+          style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}
+        >
           {JOURNEY_STAGES.map((stage, i) => (
-            <div
+            <motion.div
               key={stage.age}
+              variants={journeyRow}
               style={{
                 display: 'grid',
                 gridTemplateColumns: '120px 1fr 1fr',
@@ -174,7 +198,7 @@ export default function MensHealthSection() {
                   style={{
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.65rem',
-                    color: 'rgba(248,246,241,0.35)',
+                    color: 'var(--pewter)',
                     letterSpacing: '0.06em',
                     margin: '0.4rem 0 0',
                   }}
@@ -190,7 +214,7 @@ export default function MensHealthSection() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.5rem',
                     fontWeight: 300,
-                    color: 'var(--cream)',
+                    color: 'var(--charcoal)',
                     margin: '0 0 1rem',
                     lineHeight: 1.2,
                   }}
@@ -202,7 +226,7 @@ export default function MensHealthSection() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.85rem',
                     fontWeight: 300,
-                    color: 'rgba(248,246,241,0.6)',
+                    color: 'var(--muted)',
                     lineHeight: 1.8,
                     margin: 0,
                   }}
@@ -223,7 +247,7 @@ export default function MensHealthSection() {
                   <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.65rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--sage)', margin: '0 0 0.6rem' }}>
                     Mechanism
                   </p>
-                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.8rem', fontWeight: 300, color: 'rgba(248,246,241,0.6)', lineHeight: 1.7, margin: 0 }}>
+                  <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.8rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
                     {stage.mechanism}
                   </p>
                 </div>
@@ -251,9 +275,9 @@ export default function MensHealthSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Closing stat */}
         <div
@@ -274,7 +298,7 @@ export default function MensHealthSection() {
           ].map((s) => (
             <div key={s.label} style={{ textAlign: 'center', padding: '1.5rem', border: '0.5px solid rgba(138,171,138,0.2)' }}>
               <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2rem', fontWeight: 300, color: 'var(--sage)', margin: '0 0 0.4rem', lineHeight: 1 }}>{s.value}</p>
-              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.75rem', fontWeight: 300, color: 'rgba(248,246,241,0.45)', margin: 0, lineHeight: 1.5 }}>{s.label}</p>
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.75rem', fontWeight: 300, color: 'var(--pewter)', margin: 0, lineHeight: 1.5 }}>{s.label}</p>
             </div>
           ))}
         </div>

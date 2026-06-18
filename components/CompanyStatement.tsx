@@ -80,7 +80,7 @@ export default function CompanyStatement() {
         >
           {[
             `Polysaccharide Chemistry Pvt Ltd is a pharmaceutical chemistry company headquartered in Mumbai, India. We specialise in the development, manufacture, and commercialisation of polysaccharide-based therapeutics — molecules engineered to replicate, restore, or augment the body's own carbohydrate chemistry.`,
-            `Our flagship therapeutic, Elmiron® (Pentosan Polysulfate Sodium), is India's only oral PPS formulation — a semi-synthetic heparin analogue that repairs the bladder's glycosaminoglycan (GAG) layer in patients with Interstitial Cystitis and Bladder Pain Syndrome. Backed by 35+ years of global clinical evidence across 7 randomised controlled trials, it represents the gold standard in bladder mucosal repair therapy.`,
+            `Our flagship therapeutic, Elmiron® (Pentosan Polysulfate Sodium), is a semi-synthetic heparin analogue that repairs the bladder's glycosaminoglycan (GAG) layer in patients with Interstitial Cystitis and Bladder Pain Syndrome — manufactured in India and backed by 35+ years of global clinical evidence across 7 randomised controlled trials. It represents the gold standard in bladder mucosal repair therapy.`,
             `Alongside our product portfolio, we lead the Missed Bladder Disease initiative — a structured physician education programme addressing the diagnostic gap in women's bladder health across India, led by Dr. Sanjay Pandey and Team BladderHealthWomen.`,
           ].map((para, i) => (
             <motion.p

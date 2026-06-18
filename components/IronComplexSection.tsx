@@ -3,18 +3,21 @@
 import { useState } from 'react'
 
 const IRON_BASKET_PRODUCTS = [
-  'Ferrous Sulfate',
-  'Iron Polysaccharide',
-  'Iron III Hydroxide Polymaltose',
-  'Iron Protein Succinylate',
-  'Ferric Ammonium Citrate',
-  'Ferric Chloride',
-  'Ferrous Bisglycinate',
+  'Iron III Polymaltose',
   'Iron Sucrose',
   'Iron Dextran',
+  'Ferric Carboxymaltose',
+  'Iron Isomaltoside',
+  'Iron Polysaccharide',
 ]
 
-const IRON_BASKET_PITCH = 'Iron products for anemia, iron deficiency, women\'s health, pregnancy nutrition, pediatric nutrition and hospital injectable iron segment.'
+const SULPHATE_BASKET_PRODUCTS = [
+  'Magnesium Sulphate',
+  'Copper Sulphate',
+  'Zinc Sulphate',
+]
+
+const IRON_BASKET_PITCH = 'Selected iron complex finished dosage and mineral salt basket for haematology, anaemia and mineral supplementation — for website approval.'
 
 const IRON_PRODUCTS = [
   { name: 'Iron III Polymaltose', category: 'Oral Complex', route: 'Oral', note: 'Fewer GI side effects vs. ferrous salts' },
@@ -63,7 +66,7 @@ export default function IronComplexSection() {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
           <div>
-            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 02 — Iron Complex</p>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 02 — Iron Complex Finished Dosages</p>
             <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
               Iron Complex<br />
               <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Finished Dosage Basket</span>
@@ -72,25 +75,48 @@ export default function IronComplexSection() {
               {IRON_BASKET_PITCH}
             </p>
           </div>
-          <div>
-            <p className="section-tag" style={{ marginBottom: '1rem' }}>Portfolio Products</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              {IRON_BASKET_PRODUCTS.map((p) => (
-                <span
-                  key={p}
-                  style={{
-                    fontFamily: 'var(--font-dm-sans)',
-                    fontSize: '0.78rem',
-                    fontWeight: 400,
-                    color: 'var(--sage-deep)',
-                    background: 'rgba(138,171,138,0.12)',
-                    border: '0.5px solid rgba(138,171,138,0.35)',
-                    padding: '0.35rem 0.85rem',
-                  }}
-                >
-                  {p}
-                </span>
-              ))}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div>
+              <p className="section-tag" style={{ marginBottom: '0.65rem' }}>Iron Products</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {IRON_BASKET_PRODUCTS.map((p) => (
+                  <span
+                    key={p}
+                    style={{
+                      fontFamily: 'var(--font-dm-sans)',
+                      fontSize: '0.78rem',
+                      fontWeight: 400,
+                      color: 'var(--sage-deep)',
+                      background: 'rgba(138,171,138,0.12)',
+                      border: '0.5px solid rgba(138,171,138,0.35)',
+                      padding: '0.35rem 0.85rem',
+                    }}
+                  >
+                    {p}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="section-tag" style={{ marginBottom: '0.65rem' }}>Sulphate Products</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {SULPHATE_BASKET_PRODUCTS.map((p) => (
+                  <span
+                    key={p}
+                    style={{
+                      fontFamily: 'var(--font-dm-sans)',
+                      fontSize: '0.78rem',
+                      fontWeight: 400,
+                      color: 'var(--amber)',
+                      background: 'rgba(176,125,58,0.08)',
+                      border: '0.5px solid rgba(176,125,58,0.3)',
+                      padding: '0.35rem 0.85rem',
+                    }}
+                  >
+                    {p}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -99,9 +125,9 @@ export default function IronComplexSection() {
     {/* Narrative storyline */}
     <section
       style={{
-        background: 'var(--charcoal)',
+        background: 'var(--cream)',
         padding: '5rem 6rem',
-        borderBottom: '0.5px solid rgba(138,171,138,0.12)',
+        borderBottom: '0.5px solid rgba(138,171,138,0.22)',
       }}
       className="section-pad"
     >
@@ -119,7 +145,7 @@ export default function IronComplexSection() {
                 fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
                 fontWeight: 300,
                 fontStyle: 'italic',
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.35,
                 margin: '0 0 2.5rem',
                 borderLeft: '3px solid var(--sage)',
@@ -149,7 +175,7 @@ export default function IronComplexSection() {
                       fontFamily: 'var(--font-dm-sans)',
                       fontSize: '0.8rem',
                       fontWeight: 300,
-                      color: 'rgba(248,246,241,0.5)',
+                      color: 'var(--muted)',
                       lineHeight: 1.6,
                       paddingTop: '0.25rem',
                     }}
@@ -174,7 +200,7 @@ export default function IronComplexSection() {
                   fontFamily: 'var(--font-dm-sans)',
                   fontSize: '0.9rem',
                   fontWeight: 300,
-                  color: 'rgba(248,246,241,0.72)',
+                  color: 'var(--muted)',
                   lineHeight: 1.9,
                   margin: 0,
                 }}

@@ -27,16 +27,28 @@ const ANABOLIC_NARRATIVE = [
   `Manufacturing testosterone APIs to GMP specification for controlled substance markets requires a different organisational infrastructure than standard pharmaceutical API production. Controlled substance licences, import/export permits, batch documentation for regulatory authorities, and supply chain traceability are pre-conditions — not afterthoughts. Polysacc's capability in this category reflects a compliance infrastructure that supports legitimate pharmaceutical supply chains to regulated markets globally.`,
 ]
 
-const ANABOLIC_STEROIDS = [
-  { name: 'Testosterone Base', approvals: 'GMP' },
-  { name: 'Testosterone Undecanoate', approvals: 'GMP' },
-  { name: 'Testosterone Decanoate', approvals: 'GMP' },
-  { name: 'Testosterone Cypionate', approvals: 'GMP' },
-  { name: 'Testosterone Propionate', approvals: 'GMP' },
-  { name: 'Testosterone Enanthate', approvals: 'GMP' },
-  { name: 'Testosterone Isocaproate', approvals: 'GMP' },
-  { name: 'Testosterone Phenyl Propionate', approvals: 'GMP' },
-  { name: 'Methyltestosterone', approvals: 'GMP' },
+const ANABOLIC_STEROIDS_MALE = [
+  'Testosterone Base',
+  'Testosterone Undecanoate',
+  'Testosterone Decanoate',
+  'Testosterone Cypionate',
+  'Testosterone Propionate',
+  'Testosterone Enanthate',
+  'Testosterone Isocaproate',
+  'Testosterone Phenyl Propionate',
+  'Methyltestosterone',
+]
+
+const ANABOLIC_STEROIDS_FEMALE = [
+  'Stanozolol',
+  'Oxandrolone',
+  'Oxymetholone',
+  'Methenolone Enanthate',
+  'Trenbolone Enanthate',
+  'Boldenone Undecylenate',
+  'Methandienone (Methandrostenolone)',
+  'Clenbuterol HCl',
+  'Drostanolone Enanthate',
 ]
 
 export default function AnabolicSteroidsSection() {
@@ -122,7 +134,7 @@ export default function AnabolicSteroidsSection() {
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ marginBottom: '2.5rem' }}>
-          <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Androgen APIs</p>
+          <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 04 — Anabolic Steroids</p>
           <h2
             style={{
               fontFamily: 'var(--font-cormorant)',
@@ -137,82 +149,59 @@ export default function AnabolicSteroidsSection() {
           </h2>
         </div>
 
-        <div style={{ overflowX: 'auto' }}>
-          <table
-            style={{
-              width: '100%',
-              minWidth: '480px',
-              borderCollapse: 'collapse',
-              borderLeft: '3px solid var(--sage-deep)',
-            }}
-          >
-            <thead>
-              <tr style={{ background: 'var(--sage-deep)' }}>
-                <th
-                  style={{
-                    fontFamily: 'var(--font-dm-sans)',
-                    fontSize: '0.72rem',
-                    fontWeight: 600,
-                    color: '#fff',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase',
-                    padding: '1rem 1.5rem',
-                    textAlign: 'left',
-                  }}
-                >
-                  Product Name
-                </th>
-                <th
-                  style={{
-                    fontFamily: 'var(--font-dm-sans)',
-                    fontSize: '0.72rem',
-                    fontWeight: 600,
-                    color: '#fff',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase',
-                    padding: '1rem 1.5rem',
-                    textAlign: 'left',
-                    width: '200px',
-                  }}
-                >
-                  Approvals
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {ANABOLIC_STEROIDS.map((s, i) => (
-                <tr
-                  key={s.name}
-                  style={{ background: i % 2 === 0 ? '#fff' : 'var(--sage-pale)' }}
-                >
-                  <td
-                    style={{
-                      fontFamily: 'var(--font-dm-sans)',
-                      fontSize: '0.9rem',
-                      fontWeight: 300,
-                      color: 'var(--charcoal)',
-                      padding: '1rem 1.5rem',
-                      borderBottom: '0.5px solid rgba(138,171,138,0.2)',
-                    }}
-                  >
-                    {s.name}
-                  </td>
-                  <td
-                    style={{
-                      fontFamily: 'var(--font-dm-sans)',
-                      fontSize: '0.82rem',
-                      fontWeight: 300,
-                      color: 'var(--sage-deep)',
-                      padding: '1rem 1.5rem',
-                      borderBottom: '0.5px solid rgba(138,171,138,0.2)',
-                    }}
-                  >
-                    {s.approvals}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}
+          className="responsive-split"
+        >
+          {/* A. Male */}
+          <div style={{ border: '0.5px solid rgba(138,171,138,0.3)', overflow: 'hidden' }}>
+            <div style={{ background: 'var(--sage-deep)', padding: '0.85rem 1.25rem' }}>
+              <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 600, color: '#fff', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                A. Male
+              </span>
+            </div>
+            {ANABOLIC_STEROIDS_MALE.map((name, i) => (
+              <div
+                key={name}
+                style={{
+                  padding: '0.85rem 1.25rem',
+                  borderTop: '0.5px solid rgba(138,171,138,0.2)',
+                  background: i % 2 === 0 ? '#fff' : 'var(--sage-pale)',
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.88rem',
+                  fontWeight: 300,
+                  color: 'var(--charcoal)',
+                }}
+              >
+                {name}
+              </div>
+            ))}
+          </div>
+
+          {/* B. Female */}
+          <div style={{ border: '0.5px solid rgba(176,125,58,0.3)', overflow: 'hidden' }}>
+            <div style={{ background: 'rgba(176,125,58,0.1)', padding: '0.85rem 1.25rem', borderBottom: '0.5px solid rgba(176,125,58,0.25)' }}>
+              <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.72rem', fontWeight: 600, color: 'var(--amber)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                B. Female
+              </span>
+            </div>
+            {ANABOLIC_STEROIDS_FEMALE.map((name, i) => (
+              <div
+                key={name}
+                style={{
+                  padding: '0.85rem 1.25rem',
+                  borderTop: '0.5px solid rgba(176,125,58,0.15)',
+                  background: i % 2 === 0 ? '#fff' : 'rgba(176,125,58,0.04)',
+                  fontFamily: 'var(--font-dm-sans)',
+                  fontSize: '0.88rem',
+                  fontWeight: 300,
+                  color: 'var(--charcoal)',
+                }}
+              >
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Market intelligence accordion */}

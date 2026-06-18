@@ -38,23 +38,23 @@ export default function MCBSection() {
     <>
     {/* Basket overview */}
     <section
-      style={{ background: 'var(--charcoal)', padding: '7rem 6rem 5rem', borderBottom: '0.5px solid rgba(138,171,138,0.15)' }}
+      style={{ background: 'var(--hero-grey)', padding: '7rem 6rem 5rem', borderBottom: '0.5px solid rgba(138,171,138,0.22)' }}
       className="section-pad"
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
           <div>
-            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '0.75rem' }}>Basket 04 — Methylcobalamin</p>
-            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--cream)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
-              MCB<br />
-              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>Neuropathy Basket</span>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 03 — Methylcobalamine in Neuropathy</p>
+            <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
+              Methylcobalamine<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Neuropathy Basket</span>
             </h2>
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'rgba(248,246,241,0.6)', lineHeight: 1.75, margin: 0 }}>
-              For neuropathy, vitamin B12 deficiency, nerve health and hematinic segment.
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>
+              For peripheral neuropathy, diabetic neuropathy, nerve health and haematinic positioning. Vitamin B12 basket removed as instructed.
             </p>
           </div>
           <div>
-            <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>Portfolio Product</p>
+            <p className="section-tag" style={{ marginBottom: '1rem' }}>Portfolio Product</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
               {['Methylcobalamin'].map((p) => (
                 <span
@@ -147,7 +147,7 @@ export default function MCBSection() {
     <section
       id="mcb"
       style={{
-        background: 'var(--charcoal)',
+        background: 'var(--cream)',
         padding: '6rem 6rem',
         borderBottom: '0.5px solid rgba(138,171,138,0.25)',
       }}
@@ -168,27 +168,27 @@ export default function MCBSection() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                 fontWeight: 300,
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.2,
                 marginBottom: '1rem',
               }}
             >
               Methylcobalamin{' '}
-              <span style={{ color: 'var(--sage)', fontStyle: 'italic' }}>(MCB)</span>
+              <span style={{ color: 'var(--sage-deep)', fontStyle: 'italic' }}>(MCB)</span>
             </h2>
             <p
               style={{
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.9rem',
                 fontWeight: 300,
-                color: 'rgba(248,246,241,0.65)',
+                color: 'var(--muted)',
                 lineHeight: 1.8,
               }}
             >
               The active coenzyme form of B12 — natively present in human tissue, directly
               utilised without hepatic conversion. Positioned not as a commodity vitamin,
               but as a{' '}
-              <em style={{ color: 'var(--sage-light)' }}>differentiated neuro-metabolic therapeutic platform</em>.
+              <em style={{ color: 'var(--sage-deep)' }}>differentiated neuro-metabolic therapeutic platform</em>.
             </p>
           </div>
           <div
@@ -200,11 +200,11 @@ export default function MCBSection() {
           >
             <div style={{ textAlign: 'center', padding: '1.5rem', border: '0.5px solid rgba(138,171,138,0.25)' }}>
               <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2.5rem', fontWeight: 300, color: 'var(--sage)', margin: '0 0 0.25rem', lineHeight: 1 }}>27,542</p>
-              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'rgba(248,246,241,0.5)', letterSpacing: '0.04em', margin: 0 }}>kg API volume 2025</p>
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'var(--pewter)', letterSpacing: '0.04em', margin: 0 }}>kg API volume 2025</p>
             </div>
             <div style={{ textAlign: 'center', padding: '1.5rem', border: '0.5px solid rgba(138,171,138,0.25)' }}>
               <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '2.5rem', fontWeight: 300, color: 'var(--sage)', margin: '0 0 0.25rem', lineHeight: 1 }}>$1.3Bn</p>
-              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'rgba(248,246,241,0.5)', letterSpacing: '0.04em', margin: 0 }}>Finished drug market</p>
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'var(--pewter)', letterSpacing: '0.04em', margin: 0 }}>Finished drug market</p>
             </div>
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function MCBSection() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.2rem',
                     fontWeight: 300,
-                    color: 'var(--cream)',
+                    color: 'var(--charcoal)',
                     margin: '0 0 0.75rem',
                     lineHeight: 1.3,
                   }}
@@ -254,7 +254,7 @@ export default function MCBSection() {
                     fontFamily: 'var(--font-dm-sans)',
                     fontSize: '0.82rem',
                     fontWeight: 300,
-                    color: 'rgba(248,246,241,0.6)',
+                    color: 'var(--muted)',
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -300,7 +300,7 @@ export default function MCBSection() {
                     gap: '1rem',
                   }}
                 >
-                  <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--cream)' }}>
+                  <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--charcoal)' }}>
                     {ind.label}
                   </span>
                   <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'var(--sage)', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>
@@ -341,8 +341,8 @@ export default function MCBSection() {
                   }}
                 >
                   <div>
-                    <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--cream)', margin: 0 }}>{m.region}</p>
-                    <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'rgba(248,246,241,0.4)', margin: 0 }}>{m.note}</p>
+                    <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.88rem', fontWeight: 300, color: 'var(--charcoal)', margin: 0 }}>{m.region}</p>
+                    <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'var(--pewter)', margin: 0 }}>{m.note}</p>
                   </div>
                   <span
                     style={{
@@ -358,7 +358,7 @@ export default function MCBSection() {
                 </div>
               ))}
             </div>
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'rgba(248,246,241,0.35)', marginTop: '0.75rem' }}>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.68rem', color: 'var(--pewter)', marginTop: '0.75rem' }}>
               * MCB essentially absent from US Rx market — significant white-space opportunity.
             </p>
           </div>

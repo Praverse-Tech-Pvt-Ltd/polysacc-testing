@@ -13,10 +13,11 @@ type NavLink = {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { label: 'About',     href: '/about',      highlight: false, small: false },
-  { label: 'Science',   href: '/science',    highlight: false, small: false },
-  { label: 'Portfolio', href: '/portfolio',  highlight: false, small: false },
-  { label: 'Contact',   href: '/contact',    highlight: false, small: false },
+  { label: 'About',      href: '/about',      highlight: false, small: false },
+  { label: 'Science',    href: '/science',    highlight: false, small: false },
+  { label: 'Portfolio',  href: '/portfolio',  highlight: false, small: false },
+  { label: 'Catalogue',  href: '/catalogue',  highlight: true,  small: false },
+  { label: 'Contact',    href: '/contact',    highlight: false, small: false },
 ]
 
 export default function Nav() {

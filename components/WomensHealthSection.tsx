@@ -54,10 +54,10 @@ export default function WomensHealthSection() {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '10rem', alignItems: 'start' }} className="responsive-split">
           <div>
-            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 08 — Women's Health</p>
+            <p className="section-tag" style={{ marginBottom: '0.75rem' }}>Basket 07 — Women's Health</p>
             <h2 style={{ fontFamily: 'var(--font-cormorant)', fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 300, color: 'var(--charcoal)', lineHeight: 1.2, margin: '0 0 1.25rem' }}>
-              Gynecology<br />
-              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Oral Contraceptive Basket</span>
+              Women's Health<br />
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>Gynaecology Basket</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '0.85rem', fontWeight: 300, color: 'var(--muted)', lineHeight: 1.75, margin: 0 }}>
               Women's health and hormone basket for oral contraceptives, emergency contraception, endometriosis and hormone therapy opportunities.

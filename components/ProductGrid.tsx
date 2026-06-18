@@ -5,24 +5,24 @@ import { useRouter } from 'next/navigation'
 import { motion, useInView } from 'framer-motion'
 
 const CATEGORIES = [
-  { id: 'polysaccharide-pentosan', num: '01', label: 'Polysaccharide & Pentosan', tag: 'Bladder Health',    color: '100, 160, 155' },
-  { id: 'iron-complex',            num: '02', label: 'Iron Complex',              tag: 'Haematology',       color: '138, 171, 138' },
-  { id: 'vitamin-b12',             num: '03', label: 'Vitamin B12',               tag: 'Metabolic',         color: '160, 195, 160' },
-  { id: 'mcb',                     num: '04', label: 'MCB · Neuropathy',          tag: 'Neurology',         color: '74, 122, 74'   },
-  { id: 'steroids',                num: '05', label: 'Steroids',                  tag: 'Corticosteroids',   color: '110, 155, 110' },
-  { id: 'anabolic-steroids',       num: '06', label: 'Anabolic Steroids',         tag: 'Endocrinology',     color: '90, 140, 90'   },
-  { id: 'mens-health',             num: '07', label: "Men's Health",              tag: 'Bladder Disease',   color: '176, 125, 58'  },
-  { id: 'womens-health',           num: '08', label: "Women's Health",            tag: 'Gynaecology · OCP', color: '184, 205, 160' },
-  { id: 'devices',                 num: '09', label: 'Uro-Gyn Devices',           tag: 'Medical Devices',   color: '130, 165, 140' },
-  { id: 'sleep',                   num: '10', label: 'Sleep Solutions',           tag: 'Neuroscience',      color: '115, 100, 158' },
+  { id: 'polysaccharide-pentosan', num: '01', label: 'Polysaccharide Speciality',         tag: 'Bladder Health · IC/BPS',  color: '100, 160, 155' },
+  { id: 'iron-complex',            num: '02', label: 'Iron Complex Finished Dosages',     tag: 'Haematology · Anaemia',    color: '138, 171, 138' },
+  { id: 'methylcobalamine',        num: '03', label: 'Methylcobalamine in Neuropathy',    tag: 'Neuropathy · Hematinics',  color: '160, 195, 160' },
+  { id: 'anabolic-steroids',       num: '04', label: 'Anabolic Steroids',                 tag: 'Endocrinology',            color: '90, 140, 90'   },
+  { id: 'dexamethasone',           num: '05', label: 'High Purity Dexamethasone',         tag: 'Corticosteroids',          color: '110, 155, 110' },
+  { id: 'mens-health',             num: '06', label: "Men's Health Urology",              tag: 'Urology · BPH',            color: '176, 125, 58'  },
+  { id: 'womens-health',           num: '07', label: "Women's Health",                    tag: 'Gynaecology · HRT',        color: '184, 205, 160' },
+  { id: 'biochip',                 num: '08', label: 'Uro-Gyn Bladder Biochip',           tag: 'Biochip · Concept Stage',  color: '130, 165, 140' },
+  { id: 'fda-505b2',               num: '09', label: 'US FDA 505(b)(2) Reformulations',   tag: 'Regulatory Strategy',      color: '115, 100, 158' },
 ]
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 22, scale: 0.96 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, delay: i * 0.055, ease: [0.22, 1, 0.36, 1] },
+    scale: 1,
+    transition: { duration: 0.6, delay: i * 0.065, ease: [0.22, 1, 0.36, 1] },
   }),
 }
 
@@ -48,13 +48,20 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
         position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer',
-        background: 'var(--charcoal)',
-        padding: '2rem 1.75rem 1.75rem',
-        minHeight: '210px',
+        background: hovered ? 'rgba(255,255,255,0.82)' : 'rgba(255,255,255,0.58)',
+        backdropFilter: 'blur(20px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
+        border: hovered ? '1px solid rgba(255,255,255,0.9)' : '1px solid rgba(255,255,255,0.65)',
+        boxShadow: hovered
+          ? '0 12px 40px rgba(44,44,42,0.12), inset 0 1px 0 rgba(255,255,255,0.95)'
+          : '0 4px 20px rgba(44,44,42,0.07), inset 0 1px 0 rgba(255,255,255,0.85)',
+        padding: '2.25rem 2rem 2rem',
+        minHeight: '260px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        transition: 'background 0.35s',
+        transition: 'background 0.3s, box-shadow 0.3s, border-color 0.3s, transform 0.3s',
+        transform: hovered ? 'translateY(-3px)' : 'translateY(0)',
       }}
     >
       {/* Reactbits-style mouse spotlight */}
@@ -82,8 +89,8 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
           fontWeight: 300,
           lineHeight: 1,
           color: hovered
-            ? `rgba(${cat.color}, 0.16)`
-            : `rgba(${cat.color}, 0.055)`,
+            ? `rgba(${cat.color}, 0.22)`
+            : `rgba(${cat.color}, 0.09)`,
           userSelect: 'none',
           pointerEvents: 'none',
           transition: 'color 0.35s',
@@ -123,7 +130,7 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
           style={{
             fontFamily: 'var(--font-jetbrains)',
             fontSize: '0.55rem',
-            color: 'rgba(248,246,241,0.15)',
+            color: 'rgba(44,44,42,0.18)',
             letterSpacing: '0.1em',
           }}
         >
@@ -136,11 +143,11 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
         <h3
           style={{
             fontFamily: 'var(--font-cormorant)',
-            fontSize: '1.3rem',
+            fontSize: '1.45rem',
             fontWeight: 300,
-            color: hovered ? '#fff' : 'rgba(248,246,241,0.82)',
+            color: hovered ? `rgba(${cat.color}, 0.9)` : 'var(--charcoal)',
             lineHeight: 1.2,
-            margin: '0 0 0.85rem',
+            margin: '0 0 1rem',
             transition: 'color 0.25s',
           }}
         >
@@ -163,7 +170,7 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
               fontWeight: 600,
               letterSpacing: '0.13em',
               textTransform: 'uppercase',
-              color: hovered ? `rgba(${cat.color}, 0.9)` : 'rgba(248,246,241,0.2)',
+              color: hovered ? `rgba(${cat.color}, 0.9)` : 'var(--pewter)',
               transition: 'color 0.25s',
             }}
           >
@@ -171,7 +178,7 @@ function CategoryCard({ cat, index }: { cat: typeof CATEGORIES[number]; index: n
           </span>
           <span
             style={{
-              color: hovered ? `rgba(${cat.color}, 0.9)` : 'rgba(248,246,241,0.15)',
+              color: hovered ? `rgba(${cat.color}, 0.9)` : 'var(--pewter)',
               fontSize: '0.78rem',
               transition: 'color 0.25s, transform 0.25s',
               transform: hovered ? 'translateX(4px)' : 'translateX(0)',
@@ -193,16 +200,24 @@ export default function ProductGrid() {
   return (
     <section
       id="therapeutic-portfolio"
-      style={{ background: 'var(--charcoal)', padding: '7rem 6rem 6rem' }}
-      className="section-pad"
+      style={{ padding: '7rem 6rem 7rem' }}
+      className="section-pad basket-section"
     >
       <style>{`
+        @keyframes gradientFlow {
+          0%   { background-position: 0% 50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .basket-section {
+          background: linear-gradient(-45deg, var(--hero-grey), var(--sage-pale), #eef4ee, var(--hero-grey));
+          background-size: 400% 400%;
+          animation: gradientFlow 18s ease infinite;
+        }
         .basket-grid {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
-          gap: 1px;
-          background: rgba(138,171,138,0.13);
-          border: 0.5px solid rgba(138,171,138,0.13);
+          gap: 16px;
         }
         @media (max-width: 1024px) {
           .basket-grid { grid-template-columns: repeat(3, 1fr); }
@@ -234,12 +249,12 @@ export default function ProductGrid() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                 fontWeight: 300,
-                color: 'var(--cream)',
+                color: 'var(--charcoal)',
                 lineHeight: 1.15,
               }}
             >
-              Ten areas.{' '}
-              <span style={{ fontStyle: 'italic', color: 'var(--sage)' }}>One discipline.</span>
+              Nine baskets.{' '}
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>One discipline.</span>
             </h2>
           </div>
           <p
@@ -247,7 +262,7 @@ export default function ProductGrid() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.9rem',
               fontWeight: 300,
-              color: 'rgba(248,246,241,0.45)',
+              color: 'var(--muted)',
               lineHeight: 1.85,
             }}
           >
