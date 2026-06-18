@@ -244,7 +244,7 @@ export default function ProductGrid() {
             <p className="section-tag" style={{ color: 'var(--sage)', marginBottom: '1rem' }}>
               Therapeutic Portfolio
             </p>
-            <h2
+            {/* <h2
               style={{
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2rem, 3.5vw, 3rem)',
@@ -255,7 +255,7 @@ export default function ProductGrid() {
             >
               Nine baskets.{' '}
               <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>One discipline.</span>
-            </h2>
+            </h2> */}
           </div>
           <p
             style={{

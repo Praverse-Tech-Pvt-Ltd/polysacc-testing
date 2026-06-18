@@ -125,15 +125,15 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
         position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer',
-        background: hovered ? 'rgba(255,255,255,0.13)' : 'rgba(255,255,255,0.07)',
-        backdropFilter: 'blur(24px) saturate(1.6)',
-        WebkitBackdropFilter: 'blur(24px) saturate(1.6)',
+        background: hovered ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.6)',
+        backdropFilter: 'blur(24px) saturate(1.5)',
+        WebkitBackdropFilter: 'blur(24px) saturate(1.5)',
         border: hovered
-          ? `1px solid rgba(${basket.accent}, 0.55)`
-          : '1px solid rgba(255,255,255,0.12)',
+          ? `1px solid rgba(${basket.accent}, 0.45)`
+          : '1px solid rgba(255,255,255,0.75)',
         boxShadow: hovered
-          ? `0 16px 48px rgba(0,0,0,0.35), 0 0 0 0.5px rgba(${basket.accent}, 0.25) inset`
-          : '0 4px 24px rgba(0,0,0,0.25)',
+          ? `0 16px 48px rgba(44,44,42,0.12), inset 0 1px 0 rgba(255,255,255,0.95)`
+          : '0 4px 24px rgba(44,44,42,0.07), inset 0 1px 0 rgba(255,255,255,0.85)',
         padding: '2.5rem 2.25rem 2.25rem',
         minHeight: '240px',
         display: 'flex',
@@ -203,7 +203,7 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
           style={{
             fontFamily: 'var(--font-jetbrains)',
             fontSize: '0.55rem',
-            color: 'rgba(255,255,255,0.2)',
+            color: 'rgba(44,44,42,0.18)',
             letterSpacing: '0.1em',
           }}
         >
@@ -218,7 +218,7 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
             fontFamily: 'var(--font-cormorant)',
             fontSize: '1.5rem',
             fontWeight: 300,
-            color: hovered ? '#ffffff' : 'rgba(255,255,255,0.88)',
+            color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--charcoal)',
             lineHeight: 1.2,
             margin: '0 0 0.55rem',
             transition: 'color 0.25s',
@@ -231,7 +231,7 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
             fontFamily: 'var(--font-dm-sans)',
             fontSize: '0.72rem',
             fontWeight: 300,
-            color: hovered ? `rgba(${basket.accent}, 0.9)` : 'rgba(255,255,255,0.38)',
+            color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--muted)',
             margin: '0 0 1.1rem',
             letterSpacing: '0.02em',
             transition: 'color 0.25s',
@@ -256,7 +256,7 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
               fontWeight: 600,
               letterSpacing: '0.13em',
               textTransform: 'uppercase',
-              color: hovered ? `rgba(${basket.accent}, 0.9)` : 'rgba(255,255,255,0.25)',
+              color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--pewter)',
               transition: 'color 0.25s',
             }}
           >
@@ -264,7 +264,7 @@ function BasketCard({ basket, index }: { basket: typeof BASKETS[number]; index: 
           </span>
           <span
             style={{
-              color: hovered ? `rgba(${basket.accent}, 0.9)` : 'rgba(255,255,255,0.2)',
+              color: hovered ? `rgba(${basket.accent}, 0.9)` : 'var(--pewter)',
               fontSize: '0.78rem',
               transition: 'color 0.25s, transform 0.3s cubic-bezier(0.22,1,0.36,1)',
               transform: hovered ? 'translateX(5px)' : 'translateX(0)',
@@ -291,11 +291,11 @@ export default function CataloguePage() {
         .catalogue-bg {
           background: linear-gradient(
             -40deg,
-            #0e1a0e,
-            #131f10,
-            #1a2a18,
-            #0d1a12,
-            #192318
+            var(--hero-grey),
+            var(--sage-pale),
+            #eef4ee,
+            var(--cream),
+            var(--hero-grey)
           );
           background-size: 400% 400%;
           animation: bgShift 22s ease infinite;
@@ -332,7 +332,7 @@ export default function CataloguePage() {
                 fontSize: '0.62rem',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
-                color: 'rgba(138,171,138,0.6)',
+                color: 'var(--sage)',
                 margin: '0 0 1rem',
               }}
             >
@@ -343,13 +343,13 @@ export default function CataloguePage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
                 fontWeight: 300,
-                color: '#ffffff',
+                color: 'var(--charcoal)',
                 lineHeight: 1.05,
                 margin: '0 0 1rem',
               }}
             >
               Nine baskets.{' '}
-              <span style={{ fontStyle: 'italic', color: 'rgba(138,171,138,0.8)' }}>
+              <span style={{ fontStyle: 'italic', color: 'var(--sage-deep)' }}>
                 One discipline.
               </span>
             </h1>
@@ -358,7 +358,7 @@ export default function CataloguePage() {
                 fontFamily: 'var(--font-dm-sans)',
                 fontSize: '0.9rem',
                 fontWeight: 300,
-                color: 'rgba(255,255,255,0.4)',
+                color: 'var(--muted)',
                 maxWidth: '520px',
                 lineHeight: 1.8,
               }}
@@ -389,7 +389,7 @@ export default function CataloguePage() {
               fontFamily: 'var(--font-dm-sans)',
               fontSize: '0.72rem',
               fontWeight: 300,
-              color: 'rgba(255,255,255,0.18)',
+              color: 'var(--pewter)',
               letterSpacing: '0.05em',
               textAlign: 'center',
               marginTop: '3rem',
