@@ -5,11 +5,11 @@ const PPS_STATS = [
 ]
 
 const PPS_INDICATIONS = [
-  { area: 'Bladder Pain',             detail: 'Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS) — first-line oral therapy' },
-  { area: 'Urinary Urgency',          detail: 'Reduction of urinary urgency and frequency in chronic bladder inflammation' },
-  { area: 'GAG Layer Replenishment',  detail: 'Repairs the glycosaminoglycan (GAG) protective lining of the urothelium' },
-  { area: 'Antithrombotic / Lipid',   detail: 'Heparin-like activity; mild anticoagulant and lipid-lowering properties' },
-  { area: 'Specialty Positioning',    detail: 'Niche polysaccharide API with limited global manufacturers and high barrier to entry' },
+  { area: 'Bladder Pain — IC/BPS',        detail: 'Interstitial Cystitis / Bladder Pain Syndrome — first-line oral therapy; replenishes the GAG protective layer of the urothelium' },
+  { area: 'Osteoarthritis (OA)',           detail: 'PPS modulates cartilage metabolism and inhibits enzymes implicated in articular cartilage degradation, with evidence for pain and functional improvement' },
+  { area: 'Hyperlipidaemia (HL)',          detail: 'Heparin-like sulphation confers lipid-lowering activity; inhibits lipoprotein lipase and reduces LDL uptake in vascular endothelium' },
+  { area: 'Diabetic Nephropathy (DN)',     detail: 'Restores glomerular basement membrane heparan sulphate proteoglycans; reduces proteinuria and slows nephropathy progression in preclinical and early clinical evidence' },
+  { area: 'Urinary Urgency & Frequency',  detail: 'Reduction of urinary urgency and frequency in chronic bladder inflammation secondary to urothelial barrier dysfunction' },
 ]
 
 export default function PolysaccharidePentosanSection() {
